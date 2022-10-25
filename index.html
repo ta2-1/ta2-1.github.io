@@ -31,7 +31,7 @@
     <input required type="radio" name="HasFoodAllergy" id="HasFoodAllergyNo" value="no">
     <label for="HasFoodAllergyNo">Нет</label>
   </fieldset>  
-  <input type="text" name="FoodAllergens" required cf-conditional-HasFoodAllergy="yes" cf-questions="На какие продукты?"/>
+  <input type="text" name="FoodAllergens" cf-conditional-HasFoodAllergy="yes" cf-questions="На какие продукты?"/>
 
   <fieldset cf-questions="Есть ли у ребёнка другая форма аллергии?">
     <input required type="radio" name="HasOtherAllergy" id="HasOtherAllergyYes" value="yes">
@@ -60,7 +60,7 @@
     <input required type="radio" name="HasFoodExclusions" id="HasFoodExclusionsNo" value="no">
     <label for="HasFoodExclusionsNo">Нет</label>
   </fieldset>  
-  <input type="text" name="FoodExclusions" required cf-conditional-HasFoodExclusions="yes" cf-questions="Каких именно?"/>
+  <input type="text" name="FoodExclusions" cf-conditional-HasFoodExclusions="yes" cf-questions="Каких именно?"/>
 
   <fieldset cf-questions="Есть ли продукты в меню столовой, которых – по Вашему мнению – не хватает (совсем нет или мало)?">
     <input required type="radio" name="NotEnoughFood" id="NotEnoughFoodYes" value="yes">
@@ -68,11 +68,11 @@
     <input required type="radio" name="NotEnoughFood" id="NotEnoughFoodNo" value="no">
     <label for="NotEnoughFoodNo">Нет</label>
   </fieldset>  
-  <input type="text" name="RequestedFood" required cf-conditional-NotEnoughFood="yes" cf-questions="Каких именно?"/>
+  <input type="text" name="RequestedFood" cf-conditional-NotEnoughFood="yes" cf-questions="Каких именно?"/>
 
   <input type="text" name="KidsFoodDreams" cf-conditional-NotEnoughFood="yes" cf-questions="Спросите, пожалуйста, ребёнка  - какие продукты было бы здорово добавить в меню столовой?"/>
 
-  <fieldset cf-questions="9.	Обсуждаете ли Вы «меню на день» с ребёнком перед школой?">
+  <fieldset cf-questions="Обсуждаете ли Вы «меню на день» с ребёнком перед школой?">
     <input required type="radio" name="HaveDiscussions" id="HaveDiscussionsYes" value="yes">
     <label for="HaveDiscussionsYes">Обсуждаем вместе</label>
     <input required type="radio" name="HaveDiscussions" id="HaveDiscussionsNo" value="no">
