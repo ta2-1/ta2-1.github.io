@@ -1,0 +1,98 @@
+<html>
+  <head>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@1.0.1/dist/conversational-form.min.js" crossorigin></script>
+  </head>
+  <body>
+  
+<form  action="https://api.sheetmonkey.io/form/co9dz6kzLvUf7JZ9Q4MVhj" method="post"  cf-form>
+  <cf-robot-message cf-questions="Приветвуем Вас и начинаем)"></cf-robot-message>
+  
+  <fieldset cf-questions="Ваш ребенок вегетарианец?">
+	<input required type="radio" name="IsVegeterian" id="IsVegeterianYes" value="yes">
+	<label for="IsVegeterianYes">Да</label>
+	<input required type="radio" name="IsVegeterian" id="IsVegeterianNo" value="no">
+	<label for="IsVegeterianNo">Нет</label>
+	<input required type="radio" name="IsVegeterian" id="IsVegeterianYesNo" value="family-yes-school-no">
+	<label for="IsVegeterianYesNo">В семье – да, в школе – нет</label>
+  </fieldset>
+
+  <fieldset cf-questions="Ваш ребенок веган?">
+	<input required type="radio" name="IsVegan" id="IsVeganYes" value="yes">
+	<label for="IsVeganYes">Да</label>
+	<input required type="radio" name="IsVegan" id="IsVeganNo" value="no">
+	<label for="IsVeganNo">Нет</label>
+	<input required type="radio" name="IsVegan" id="IsVeganYesNo" value="family-yes-school-no">
+	<label for="IsVeganYesNo">В семье – да, в школе – нет</label>
+  </fieldset>
+
+  <fieldset cf-questions="Есть ли у ребёнка пищевая аллергия / непереносимость?">
+    <input required type="radio" name="HasFoodAllergy" id="HasFoodAllergyYes" value="yes">
+    <label for="HasFoodAllergyYes">Да</label>
+    <input required type="radio" name="HasFoodAllergy" id="HasFoodAllergyNo" value="no">
+    <label for="HasFoodAllergyNo">Нет</label>
+  </fieldset>  
+  <input type="text" name="FoodAllergens" required cf-conditional-HasFoodAllergy="yes" cf-questions="На какие продукты?"/>
+
+  <fieldset cf-questions="Есть ли у ребёнка другая форма аллергии?">
+    <input required type="radio" name="HasOtherAllergy" id="HasOtherAllergyYes" value="yes">
+    <label for="HasOtherAllergyYes">Да</label>
+    <input required type="radio" name="HasOtherAllergy" id="HasOtherAllergyNo" value="no">
+    <label for="HasOtherAllergyNo">Нет</label>
+  </fieldset>  
+  
+  <fieldset cf-questions="Требуется ли ему гипоаллергенная диета?" cf-conditional-HasOtherAllergy="yes">
+    <input required type="radio" name="NeedHypoallergenicDiet" id="NeedHypoallergenicDietYes" value="yes">
+    <label for="NeedHypoallergenicDietYes">Да</label>
+    <input required type="radio" name="NeedHypoallergenicDiet" id="NeedHypoallergenicDietNo" value="no">
+    <label for="NeedHypoallergenicDietNo">Нет</label>
+  </fieldset>  
+  
+  <fieldset cf-questions="Получает ли Ваш ребёнок АСИТ (аллерген-специфическую иммунотерапию)?" cf-conditional-HasOtherAllergy="yes">
+    <input required type="radio" name="NeedASIT" id="NeedASITYes" value="yes">
+    <label for="NeedASITYes">Да</label>
+    <input required type="radio" name="NeedASIT" id="NeedASITNo" value="no">
+    <label for="NeedASITNo">Нет</label>
+  </fieldset>
+  
+  <fieldset cf-questions="Есть ли продукты (независимо от медицинских диагнозов), которые Вашему ребёнку следует избегать в рационе?">
+    <input required type="radio" name="HasFoodExclusions" id="HasFoodExclusionsYes" value="yes">
+    <label for="HasFoodExclusionsYes">Да</label>
+    <input required type="radio" name="HasFoodExclusions" id="HasFoodExclusionsNo" value="no">
+    <label for="HasFoodExclusionsNo">Нет</label>
+  </fieldset>  
+  <input type="text" name="FoodExclusions" required cf-conditional-HasFoodExclusions="yes" cf-questions="Каких именно?"/>
+
+  <fieldset cf-questions="Есть ли продукты в меню столовой, которых – по Вашему мнению – не хватает (совсем нет или мало)?">
+    <input required type="radio" name="NotEnoughFood" id="NotEnoughFoodYes" value="yes">
+    <label for="NotEnoughFoodYes">Да</label>
+    <input required type="radio" name="NotEnoughFood" id="NotEnoughFoodNo" value="no">
+    <label for="NotEnoughFoodNo">Нет</label>
+  </fieldset>  
+  <input type="text" name="RequestedFood" required cf-conditional-NotEnoughFood="yes" cf-questions="Каких именно?"/>
+
+  <input type="text" name="KidsFoodDreams" cf-conditional-NotEnoughFood="yes" cf-questions="Спросите, пожалуйста, ребёнка  - какие продукты было бы здорово добавить в меню столовой?"/>
+
+  <fieldset cf-questions="9.	Обсуждаете ли Вы «меню на день» с ребёнком перед школой?">
+    <input required type="radio" name="HaveDiscussions" id="HaveDiscussionsYes" value="yes">
+    <label for="HaveDiscussionsYes">Обсуждаем вместе</label>
+    <input required type="radio" name="HaveDiscussions" id="HaveDiscussionsNo" value="no">
+    <label for="HaveDiscussionsNo">Нет, ребёнок делает выбор уже в столовой</label>
+    <input required type="radio" name="HaveDiscussions" id="HaveDiscussionsBoth" value="both">
+    <label for="HaveDiscussionsBoth">Бывают оба варианта</label>
+  </fieldset>  
+  
+  <fieldset cf-questions="Хотите представиться?">
+    <input required type="radio" name="NeedName" id="NeedNameYes" value="yes">
+    <label for="NeedNameYes">Да</label>
+    <input required type="radio" name="NeedName" id="NeedNameNo" value="no">
+    <label for="NeedNameNo">Нет</label>
+  </fieldset>  
+ 
+  <input type="text" name="Name" cf-conditional-NeedName="yes" cf-questions="Как зовут Вашего ребенка?"/>
+    
+  <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+  <input type="submit" value="Save Responses" />
+</form>
+
+  </body>
+</html>
