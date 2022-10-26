@@ -133,7 +133,7 @@
     <label for="TooMuchSugarNo">Нет</label>
   </fieldset>  
 
-  <input type="text" name="WhyTooMuchSugar" cf-conditional-TooMuchSugar="yes" cf-questions="Что хотелось бы изменить?"/>
+  <input type="text" name="WhyTooMuchSugar" cf-conditional-TooMuchSugar="yes" cf-questions="Расскажите почему?"/>
 
   <fieldset cf-conditional-TooMuchSugar="no" cf-questions="По Вашим наблюдениям: много ли сахара в рационе Вашего ребёнка (в школе и дома)?">
     <input required type="radio" name="WhyNotTooMuchSugar" id="WhyNotTooMuchSugar1" value="Don't think about sugar">
@@ -158,7 +158,7 @@
     <input required type="radio" name="NeedRationExpansion" id="NeedRationExpansionYes" value="need ration expansion">
     <label for="NeedRationExpansionYes">Нужны изменения</label>
   </fieldset>  
-  <input type="text" name="NeedRationExpansion" cf-conditional-IsSugarIndifferent="need ration expansion" cf-questions="Какие именно?"/>
+  <input type="text" name="NeedRationExpansion" cf-conditional-NeedRationExpansion="need ration expansion" cf-questions="Какие именно?"/>
 
   <fieldset cf-questions="Кушает ли Ваш ребёнок полдник?">
     <input required type="radio" name="EatsPoldnik" id="EatsPoldnikYes" value="yes">
@@ -193,7 +193,7 @@
     <input required type="radio" name="FoodEducation" id="FoodEducationNo" value="no">
     <label for="FoodEducationNo">Отрицательно</label>
   </fieldset>  
-  <input type="text" name="FoodEducation" cf-conditional-HasDifficulties="no" cf-questions="Расскажите почему?"/>
+  <input type="text" name="FoodEducation" cf-conditional-FoodEducation="no" cf-questions="Расскажите почему?"/>
 
   <fieldset cf-questions="Какие акценты в питании младших школьников Вам импонируют?">
     <input type="checkbox" name="Accents" cf-label="Просто вкусная еда из качественных продуктов" />
