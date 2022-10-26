@@ -203,7 +203,13 @@
     <input type="checkbox" name="Accents" cf-label="Разнообразие по принципу «здоровой тарелки»" />	  
   </fieldset>  
 
-  <input type="textarea" name="OtherAccents" cf-questions="Можно добавить ещё)"/>
+  <fieldset cf-questions="Ещё?">
+    <input required type="radio" name="NeedOtherAccents" id="FoodEducationYes" value="yes">
+    <label for="NeedOtherAccentsYes">Да</label>
+    <input required type="radio" name="NeedOtherAccents" id="FoodEducationNo" value="no">
+    <label for="NeedOtherAccentsNo">Нет</label>
+  </fieldset>  
+  <input type="textarea" name="OtherAccents" cf-conditional-NeedOtherAccents="yes" cf-questions="Какие?"/>
 	
   <fieldset cf-questions="Хотите представиться?">
     <input required type="radio" name="NeedName" id="NeedNameYes" value="yes">
