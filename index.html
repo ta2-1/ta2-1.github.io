@@ -49,7 +49,7 @@
     </fieldset>  
     <input type="text" name="FoodAllergens" cf-conditional-HasFoodAllergy="yes" cf-questions="На какие продукты?"/>
 
-    <fieldset cf-questions="Есть ли у ребёнка другая форма аллергии (непищевая)?">
+    <fieldset cf-questions="Есть ли у ребёнка другая форма аллергии (<b>не</b>пищевая)?">
       <input required type="radio" name="HasOtherAllergy" id="HasOtherAllergyYes" value="yes">
       <label for="HasOtherAllergyYes">Да</label>
       <input required type="radio" name="HasOtherAllergy" id="HasOtherAllergyNo" value="no">
@@ -103,7 +103,7 @@
       <input required type="radio" name="AreSatisfied" id="AreSatisfiedNo" value="no">
       <label for="AreSatisfiedNo">Нет</label>
       <input required type="radio" name="AreSatisfied" id="AreSatisfiedYesNo" value="I do not know">
-      <label for="AreSatisfiedYesNo">Я не знаю, что он там ест)</label>
+      <label for="AreSatisfiedYesNo">Я не знаю, что он там ест ☺</label>
     </fieldset>  
     <input type="text" name="WhatToChange" cf-conditional-AreSatisfied="no" cf-questions="Что хотелось бы изменить?"/>
 
@@ -194,12 +194,7 @@
     
     <cf-robot-message cf-questions="Есть ли у ребёнка трудности в столовой?"></cf-robot-message>
     <cf-robot-message cf-questions="Например:"></cf-robot-message>
-    <cf-robot-message cf-questions="&#8226; боится разбить посуду <br/>"></cf-robot-message>
-    <cf-robot-message cf-questions="&#8226; переживает, что в очереди торопят"></cf-robot-message>
-    <cf-robot-message cf-questions="&#8226; не успевает выбрать что хотелось бы"></cf-robot-message>
-    <cf-robot-message cf-questions="&#8226; незнакомый вид блюд — не знает, что выбрать"></cf-robot-message>
-    <cf-robot-message cf-questions="&#8226; боится не успеть, ест второпях"></cf-robot-message>
-    <cf-robot-message cf-questions="&#8226; считает, что всю порцию нужно съесть"></cf-robot-message>
+    <cf-robot-message cf-questions="&#8226; боится разбить посуду <br/>&#8226; переживает, что в очереди торопят<br/>&#8226; не успевает выбрать что хотелось бы<br/>&#8226; незнакомый вид блюд — не знает, что выбрать<br/>&#8226; боится не успеть, ест второпях<br/>&#8226; считает, что всю порцию нужно съесть"></cf-robot-message>
          
     <fieldset cf-questions="">
       <input required type="radio" name="HasDifficulties" id="HasDifficultiesYes" value="yes">
