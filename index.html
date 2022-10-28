@@ -4,13 +4,24 @@
   <head>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@1.0.1/dist/conversational-form.min.js" crossorigin></script>
     <link rel="stylesheet" href="https://space10-community.github.io/conversational-form/landingpage/main.d7d27bd6.css">
+    <script type="text/javascript">
+      var data = {      
+        "entry-not-found": "Элемент не найден",
+        "input-placeholder": "Введите свой ответ здесь",                 
+        "group-placeholder": "...",                         
+        "input-placeholder-required": "Обязательно нужно что-то ввести", 
+        "input-no-filter": "Ничего не найдено по запросу ‛{input-value}‛",         
+        "user-reponse-and": " и ",                                       
+        "user-reponse-missing": "Ответ пропущен ...",                       
+        "user-reponse-missing-group": "Ничего не выбрано ..."
+      };
+    </script>
   </head>
   <body>
   
   <form class="form" action="https://api.sheetmonkey.io/form/co9dz6kzLvUf7JZ9Q4MVhj" method="post" cf-form robotImage="">
-    <cf-robot-message cf-questions="Всем привет! Очень нужна Ваша помощь."></cf-robot-message>
-    <cf-robot-message cf-questions="Стало понятно, что для разговора о питании первоклассников нам очень не хватает данных и обратной связи от родителей. Опрос не очень большой и не очень скучный :) и может быть пройден анонимно)."></cf-robot-message>
-    <cf-robot-message cf-questions="Начинаем)"></cf-robot-message>
+    <cf-robot-message cf-questions="Спасибо, что Вы с нами!"></cf-robot-message>
+    <cf-robot-message cf-questions="Мы начинаем)"></cf-robot-message>
 
     <fieldset cf-questions="Ваш ребенок вегетарианец?">
     <input required type="radio" name="IsVegeterian" id="IsVegeterianYes" value="yes">
@@ -38,7 +49,7 @@
     </fieldset>  
     <input type="text" name="FoodAllergens" cf-conditional-HasFoodAllergy="yes" cf-questions="На какие продукты?"/>
 
-    <fieldset cf-questions="Есть ли у ребёнка другая форма аллергии?">
+    <fieldset cf-questions="Есть ли у ребёнка другая форма аллергии (непищевая)?">
       <input required type="radio" name="HasOtherAllergy" id="HasOtherAllergyYes" value="yes">
       <label for="HasOtherAllergyYes">Да</label>
       <input required type="radio" name="HasOtherAllergy" id="HasOtherAllergyNo" value="no">
@@ -59,7 +70,7 @@
       <label for="NeedASITNo">Нет</label>
     </fieldset>
 
-    <fieldset cf-questions="Есть ли продукты (независимо от медицинских диагнозов), которые Вашему ребёнку следует избегать в рационе?">
+    <fieldset cf-questions="Есть ли продукты (независимо от медицинских диагнозов), которых ребёнку следует избегать?">
       <input required type="radio" name="HasFoodExclusions" id="HasFoodExclusionsYes" value="yes">
       <label for="HasFoodExclusionsYes">Да</label>
       <input required type="radio" name="HasFoodExclusions" id="HasFoodExclusionsNo" value="no">
@@ -137,11 +148,11 @@
     </fieldset>  
 
     <fieldset cf-conditional-TooMuchSugar="no" cf-questions="Как Вы это объясняете?">
-      <input required type="radio" name="WhyNotTooMuchSugar" id="WhyNotTooMuchSugar1" value="Don't think about sugar">
+      <input cf-conditional-TooMuchSugar="no" type="radio" name="WhyNotTooMuchSugar" id="WhyNotTooMuchSugar1" value="Don't think about sugar">
       <label for="WhyNotTooMuchSugar1">Мы не думаем о сахаре и не считаем количество</label>
-      <input required type="radio" name="WhyNotTooMuchSugar" id="WhyNotTooMuchSugar2" value="Don't like sugar">
+      <input cf-conditional-TooMuchSugar="no" type="radio" name="WhyNotTooMuchSugar" id="WhyNotTooMuchSugar2" value="Don't like sugar">
       <label for="WhyNotTooMuchSugar2">Ребёнок не любит сахар/сладкое</label>
-      <input required type="radio" name="WhyNotTooMuchSugar" id="WhyNotTooMuchSugar3" value="Can measure sugar">
+      <input cf-conditional-TooMuchSugar="no" type="radio" name="WhyNotTooMuchSugar" id="WhyNotTooMuchSugar3" value="Can measure sugar">
       <label for="WhyNotTooMuchSugar3">Ребёнок ест сахар/сладкое, но научен его дозировать</label>    
     </fieldset>  
 
