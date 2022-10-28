@@ -1,229 +1,231 @@
 <html>
-<head>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@1.0.1/dist/conversational-form.min.js" crossorigin></script>
-</head>
-<body>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1">
+  <head>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@1.0.1/dist/conversational-form.min.js" crossorigin></script>
+    <link rel="stylesheet" href="https://space10-community.github.io/conversational-form/landingpage/main.d7d27bd6.css">
+  </head>
+  <body>
   
-<form  action="https://api.sheetmonkey.io/form/co9dz6kzLvUf7JZ9Q4MVhj" method="post" cf-form robotImage="https://thumbs.dreamstime.com/b/%D0%BC%D0%B0%D0%BB%D0%B5%D0%BD%D1%8C%D0%BA%D0%B8%D0%B9-%D1%80%D0%BE%D0%B1%D0%BE%D1%82-%D0%BF%D0%BE%D0%B2%D0%B0%D1%80-%D0%B4%D0%B5%D1%80%D0%B6%D0%B0-%D0%BF%D1%80%D0%B8%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BA%D0%B0%D1%81%D1%82%D1%80%D1%8E%D0%BB%D1%8F-d-%D1%80%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D0%B8%D0%BD%D0%B3-%D0%BF%D0%B0%D0%BD-219279508.jpg">
-  <cf-robot-message cf-questions="Всем привет! Очень нужна Ваша помощь."></cf-robot-message>
-  <cf-robot-message cf-questions="Стало понятно, что для разговора о питании первоклассников нам очень не хватает данных и обратной связи от родителей. Опрос не очень большой и не очень скучный :) и может быть пройден анонимно)."></cf-robot-message>
-  <cf-robot-message cf-questions="Начинаем)"></cf-robot-message>
-  
-  <fieldset cf-questions="Ваш ребенок вегетарианец?">
-	<input required type="radio" name="IsVegeterian" id="IsVegeterianYes" value="yes">
-	<label for="IsVegeterianYes">Да</label>
-	<input required type="radio" name="IsVegeterian" id="IsVegeterianNo" value="no">
-	<label for="IsVegeterianNo">Нет</label>
-	<input required type="radio" name="IsVegeterian" id="IsVegeterianYesNo" value="family-yes-school-no">
-	<label for="IsVegeterianYesNo">В семье – да, в школе – нет</label>
-  </fieldset>
+  <form class="form" action="https://api.sheetmonkey.io/form/co9dz6kzLvUf7JZ9Q4MVhj" method="post" cf-form robotImage="">
+    <cf-robot-message cf-questions="Всем привет! Очень нужна Ваша помощь."></cf-robot-message>
+    <cf-robot-message cf-questions="Стало понятно, что для разговора о питании первоклассников нам очень не хватает данных и обратной связи от родителей. Опрос не очень большой и не очень скучный :) и может быть пройден анонимно)."></cf-robot-message>
+    <cf-robot-message cf-questions="Начинаем)"></cf-robot-message>
 
-  <fieldset cf-questions="Ваш ребенок веган?">
-	<input required type="radio" name="IsVegan" id="IsVeganYes" value="yes">
-	<label for="IsVeganYes">Да</label>
-	<input required type="radio" name="IsVegan" id="IsVeganNo" value="no">
-	<label for="IsVeganNo">Нет</label>
-	<input required type="radio" name="IsVegan" id="IsVeganYesNo" value="family-yes-school-no">
-	<label for="IsVeganYesNo">В семье – да, в школе – нет</label>
-  </fieldset>
+    <fieldset cf-questions="Ваш ребенок вегетарианец?">
+    <input required type="radio" name="IsVegeterian" id="IsVegeterianYes" value="yes">
+    <label for="IsVegeterianYes">Да</label>
+    <input required type="radio" name="IsVegeterian" id="IsVegeterianNo" value="no">
+    <label for="IsVegeterianNo">Нет</label>
+    <input required type="radio" name="IsVegeterian" id="IsVegeterianYesNo" value="family-yes-school-no">
+    <label for="IsVegeterianYesNo">В семье – да, в школе – нет</label>
+    </fieldset>
 
-  <fieldset cf-questions="Есть ли у ребёнка пищевая аллергия / непереносимость?">
-    <input required type="radio" name="HasFoodAllergy" id="HasFoodAllergyYes" value="yes">
-    <label for="HasFoodAllergyYes">Да</label>
-    <input required type="radio" name="HasFoodAllergy" id="HasFoodAllergyNo" value="no">
-    <label for="HasFoodAllergyNo">Нет</label>
-  </fieldset>  
-  <input type="text" name="FoodAllergens" cf-conditional-HasFoodAllergy="yes" cf-questions="На какие продукты?"/>
+    <fieldset cf-questions="Ваш ребенок веган?">
+    <input required type="radio" name="IsVegan" id="IsVeganYes" value="yes">
+    <label for="IsVeganYes">Да</label>
+    <input required type="radio" name="IsVegan" id="IsVeganNo" value="no">
+    <label for="IsVeganNo">Нет</label>
+    <input required type="radio" name="IsVegan" id="IsVeganYesNo" value="family-yes-school-no">
+    <label for="IsVeganYesNo">В семье – да, в школе – нет</label>
+    </fieldset>
 
-  <fieldset cf-questions="Есть ли у ребёнка другая форма аллергии?">
-    <input required type="radio" name="HasOtherAllergy" id="HasOtherAllergyYes" value="yes">
-    <label for="HasOtherAllergyYes">Да</label>
-    <input required type="radio" name="HasOtherAllergy" id="HasOtherAllergyNo" value="no">
-    <label for="HasOtherAllergyNo">Нет</label>
-  </fieldset>  
-  
-  <fieldset cf-questions="Требуется ли ему гипоаллергенная диета?" cf-conditional-HasOtherAllergy="yes">
-    <input required type="radio" name="NeedHypoallergenicDiet" id="NeedHypoallergenicDietYes" value="yes">
-    <label for="NeedHypoallergenicDietYes">Да</label>
-    <input required type="radio" name="NeedHypoallergenicDiet" id="NeedHypoallergenicDietNo" value="no">
-    <label for="NeedHypoallergenicDietNo">Нет</label>
-  </fieldset>  
-  
-  <fieldset cf-questions="Получает ли Ваш ребёнок АСИТ (аллерген-специфическую иммунотерапию)?" cf-conditional-HasOtherAllergy="yes">
-    <input required type="radio" name="NeedASIT" id="NeedASITYes" value="yes">
-    <label for="NeedASITYes">Да</label>
-    <input required type="radio" name="NeedASIT" id="NeedASITNo" value="no">
-    <label for="NeedASITNo">Нет</label>
-  </fieldset>
-  
-  <fieldset cf-questions="Есть ли продукты (независимо от медицинских диагнозов), которые Вашему ребёнку следует избегать в рационе?">
-    <input required type="radio" name="HasFoodExclusions" id="HasFoodExclusionsYes" value="yes">
-    <label for="HasFoodExclusionsYes">Да</label>
-    <input required type="radio" name="HasFoodExclusions" id="HasFoodExclusionsNo" value="no">
-    <label for="HasFoodExclusionsNo">Нет</label>
-  </fieldset>  
-  <input type="text" name="FoodExclusions" cf-conditional-HasFoodExclusions="yes" cf-questions="Каких именно?"/>
+    <fieldset cf-questions="Есть ли у ребёнка пищевая аллергия / непереносимость?">
+      <input required type="radio" name="HasFoodAllergy" id="HasFoodAllergyYes" value="yes">
+      <label for="HasFoodAllergyYes">Да</label>
+      <input required type="radio" name="HasFoodAllergy" id="HasFoodAllergyNo" value="no">
+      <label for="HasFoodAllergyNo">Нет</label>
+    </fieldset>  
+    <input type="text" name="FoodAllergens" cf-conditional-HasFoodAllergy="yes" cf-questions="На какие продукты?"/>
 
-  <fieldset cf-questions="Есть ли продукты в меню столовой, которых – по Вашему мнению – не хватает (совсем нет или мало)?">
-    <input required type="radio" name="NotEnoughFood" id="NotEnoughFoodYes" value="yes">
-    <label for="NotEnoughFoodYes">Да</label>
-    <input required type="radio" name="NotEnoughFood" id="NotEnoughFoodNo" value="no">
-    <label for="NotEnoughFoodNo">Нет</label>
-  </fieldset>  
-  <input type="text" name="RequestedFood" cf-conditional-NotEnoughFood="yes" cf-questions="Каких именно?"/>
+    <fieldset cf-questions="Есть ли у ребёнка другая форма аллергии?">
+      <input required type="radio" name="HasOtherAllergy" id="HasOtherAllergyYes" value="yes">
+      <label for="HasOtherAllergyYes">Да</label>
+      <input required type="radio" name="HasOtherAllergy" id="HasOtherAllergyNo" value="no">
+      <label for="HasOtherAllergyNo">Нет</label>
+    </fieldset>  
 
-  <input type="text" name="KidsFoodDreams" cf-conditional-NotEnoughFood="yes" cf-questions="Спросите, пожалуйста, ребёнка ☺ — какие продукты было бы здорово добавить в меню столовой?"/>
+    <fieldset cf-questions="Требуется ли ему гипоаллергенная диета?" cf-conditional-HasOtherAllergy="yes">
+      <input required type="radio" name="NeedHypoallergenicDiet" id="NeedHypoallergenicDietYes" value="yes">
+      <label for="NeedHypoallergenicDietYes">Да</label>
+      <input required type="radio" name="NeedHypoallergenicDiet" id="NeedHypoallergenicDietNo" value="no">
+      <label for="NeedHypoallergenicDietNo">Нет</label>
+    </fieldset>  
 
-  <fieldset cf-questions="Обсуждаете ли Вы «меню на день» с ребёнком перед школой?">
-    <input required type="radio" name="HaveDiscussions" id="HaveDiscussionsYes" value="yes">
-    <label for="HaveDiscussionsYes">Обсуждаем вместе</label>
-    <input required type="radio" name="HaveDiscussions" id="HaveDiscussionsNo" value="no">
-    <label for="HaveDiscussionsNo">Нет, ребёнок делает выбор уже в столовой</label>
-    <input required type="radio" name="HaveDiscussions" id="HaveDiscussionsBoth" value="both">
-    <label for="HaveDiscussionsBoth">Бывают оба варианта</label>
-  </fieldset>  
-  
-  <fieldset cf-questions="Если Вам известно, что ребёнок кушает в школе, довольны ли Вы его рационом?">
-    <input required type="radio" name="AreSatisfied" id="AreSatisfiedYes" value="yes">
-    <label for="AreSatisfiedYes">Да</label>
-    <input required type="radio" name="AreSatisfied" id="AreSatisfiedNo" value="no">
-    <label for="AreSatisfiedNo">Нет</label>
-    <input required type="radio" name="AreSatisfied" id="AreSatisfiedYesNo" value="I do not know">
-    <label for="AreSatisfiedYesNo">Мне неизвестно</label>
-  </fieldset>  
-  <input type="text" name="WhatToChange" cf-conditional-AreSatisfied="no" cf-questions="Что хотелось бы изменить?"/>
-	
-  <fieldset cf-questions="По Вашим наблюдениям: пьёт ли ребёнок достаточно воды, предпочитает ли воду?">
-    <input required type="radio" name="DrinkEnough" id="DrinkEnoughYes" value="yes">
-    <label for="DrinkEnoughYes">Да</label>
-    <input required type="radio" name="DrinkEnough" id="DrinkEnoughNo" value="no">
-    <label for="DrinkEnoughNo">Нет</label>
-  </fieldset>  
-		
-  <fieldset cf-questions="Какие напитки ребёнок выбирает в столовой на завтрак?">
-	  <input type="checkbox" name="BreakfastDrinks" cf-label="молоко" />
-	  <input type="checkbox" name="BreakfastDrinks" cf-label="кефир/ряженка" />
-	  <input type="checkbox" name="BreakfastDrinks" cf-label="молочный коктейль" />
-	  <input type="checkbox" name="BreakfastDrinks" cf-label="соевое молоко" />
-	  <input type="checkbox" name="BreakfastDrinks" cf-label="какао" />
-	  <input type="checkbox" name="BreakfastDrinks" cf-label="горячий шоколад" />
-	  <input type="checkbox" name="BreakfastDrinks" cf-label="цикорий" />
-	  <input type="checkbox" name="BreakfastDrinks" cf-label="чай" />
-	  <input type="checkbox" name="BreakfastDrinks" cf-label="вода" />
-  </fieldset>  
+    <fieldset cf-questions="Получает ли Ваш ребёнок АСИТ (аллерген-специфическую иммунотерапию)?" cf-conditional-HasOtherAllergy="yes">
+      <input required type="radio" name="NeedASIT" id="NeedASITYes" value="yes">
+      <label for="NeedASITYes">Да</label>
+      <input required type="radio" name="NeedASIT" id="NeedASITNo" value="no">
+      <label for="NeedASITNo">Нет</label>
+    </fieldset>
 
-  <fieldset cf-questions="А на обед?">
-	  <input type="checkbox" name="LunchDrinks" cf-label="морс (клюква / чёрная смородина / малина)" />
-	  <input type="checkbox" name="LunchDrinks" cf-label="компот (клубника / сухофрукты)" />
-	  <input type="checkbox" name="LunchDrinks" cf-label="напиток (яблоко, цитрус, шиповник)" />
-	  <input type="checkbox" name="LunchDrinks" cf-label="чай" />
-	  <input type="checkbox" name="LunchDrinks" cf-label="вода" />
-  </fieldset>  
-	
-  <fieldset cf-questions="А на полдник?">
-	  <input type="checkbox" name="PoldnikDrinks" cf-label="кефир/ряженка" />
-	  <input type="checkbox" name="PoldnikDrinks" cf-label="чай" />
-	  <input type="checkbox" name="PoldnikDrinks" cf-label="вода" />
-  </fieldset>
+    <fieldset cf-questions="Есть ли продукты (независимо от медицинских диагнозов), которые Вашему ребёнку следует избегать в рационе?">
+      <input required type="radio" name="HasFoodExclusions" id="HasFoodExclusionsYes" value="yes">
+      <label for="HasFoodExclusionsYes">Да</label>
+      <input required type="radio" name="HasFoodExclusions" id="HasFoodExclusionsNo" value="no">
+      <label for="HasFoodExclusionsNo">Нет</label>
+    </fieldset>  
+    <input type="text" name="FoodExclusions" cf-conditional-HasFoodExclusions="yes" cf-questions="Каких именно?"/>
 
-  <fieldset cf-questions="По Вашим наблюдениям: много ли сахара в рационе Вашего ребёнка (в школе и дома)?">
-    <input required type="radio" name="TooMuchSugar" id="TooMuchSugarYes" value="yes">
-    <label for="TooMuchSugarYes">Да</label>
-    <input required type="radio" name="TooMuchSugar" id="TooMuchSugarNo" value="no">
-    <label for="TooMuchSugarNo">Нет</label>
-  </fieldset>  
+    <fieldset cf-questions="Есть ли продукты в меню столовой, которых – по Вашему мнению – не хватает (совсем нет или мало)?">
+      <input required type="radio" name="NotEnoughFood" id="NotEnoughFoodYes" value="yes">
+      <label for="NotEnoughFoodYes">Да</label>
+      <input required type="radio" name="NotEnoughFood" id="NotEnoughFoodNo" value="no">
+      <label for="NotEnoughFoodNo">Нет</label>
+    </fieldset>  
+    <input type="text" name="RequestedFood" cf-conditional-NotEnoughFood="yes" cf-questions="Каких именно?"/>
 
-  <input type="text" name="WhyTooMuchSugar" cf-conditional-TooMuchSugar="yes" cf-questions="Расскажите почему?"/>
+    <input type="text" name="KidsFoodDreams" cf-conditional-NotEnoughFood="yes" cf-questions="Спросите, пожалуйста, ребёнка ☺ — какие продукты было бы здорово добавить в меню столовой?"/>
 
-  <fieldset cf-conditional-TooMuchSugar="no" cf-questions="По Вашим наблюдениям: много ли сахара в рационе Вашего ребёнка (в школе и дома)?">
-    <input required type="radio" name="WhyNotTooMuchSugar" id="WhyNotTooMuchSugar1" value="Don't think about sugar">
-    <label for="WhyNotTooMuchSugar1">Мы не думаем о сахаре и не считаем количество</label>
-    <input required type="radio" name="WhyNotTooMuchSugar" id="WhyNotTooMuchSugar2" value="Don't like sugar">
-    <label for="WhyNotTooMuchSugar2">Ребёнок не любит сахар/сладкое</label>
-    <input required type="radio" name="WhyNotTooMuchSugar" id="WhyNotTooMuchSugar2" value="Can measure sugar">
-    <label for="WhyNotTooMuchSugar2">Ребёнок ест сахар/сладкое, но научен его дозировать</label>    
-  </fieldset>  
- 
-  <fieldset cf-questions="Спокойно ли Ваш ребёнок относится к сахару и десертам?">
-    <input required type="radio" name="IsSugarIndifferent" id="IsSugarIndifferentYes" value="yes">
-    <label for="IsSugarIndifferentYes">Да</label>
-    <input required type="radio" name="IsSugarIndifferent" id="IsSugarIndifferentNo" value="no">
-    <label for="IsSugarIndifferentNo">Нет</label>
-  </fieldset>  
-  <input type="text" name="AfterSugar" cf-conditional-IsSugarIndifferent="no" cf-questions="Что Вы замечаете?"/>
+    <fieldset cf-questions="Обсуждаете ли Вы «меню на день» с ребёнком перед школой?">
+      <input required type="radio" name="HaveDiscussions" id="HaveDiscussionsYes" value="yes">
+      <label for="HaveDiscussionsYes">Обсуждаем вместе</label>
+      <input required type="radio" name="HaveDiscussions" id="HaveDiscussionsNo" value="no">
+      <label for="HaveDiscussionsNo">Нет, ребёнок делает выбор уже в столовой</label>
+      <input required type="radio" name="HaveDiscussions" id="HaveDiscussionsBoth" value="both">
+      <label for="HaveDiscussionsBoth">Бывают оба варианта</label>
+    </fieldset>  
 
-  <fieldset cf-questions="По Вашим наблюдениям (и в школе, и дома): ребёнок питается разнообразно или Вам бы хотелось расширения рациона/изменений?">
-    <input required type="radio" name="NeedRationExpansion" id="NeedRationExpansionNo" value="everything is ok">
-    <label for="NeedRationExpansionNo">Всё хорошо</label>
-    <input required type="radio" name="NeedRationExpansion" id="NeedRationExpansionYes" value="need ration expansion">
-    <label for="NeedRationExpansionYes">Нужны изменения</label>
-  </fieldset>  
-  <input type="text" name="NeedRationExpansion" cf-conditional-NeedRationExpansion="need ration expansion" cf-questions="Какие именно?"/>
+    <fieldset cf-questions="Если Вам известно, что ребёнок кушает в школе, довольны ли Вы его рационом?">
+      <input required type="radio" name="AreSatisfied" id="AreSatisfiedYes" value="yes">
+      <label for="AreSatisfiedYes">Да</label>
+      <input required type="radio" name="AreSatisfied" id="AreSatisfiedNo" value="no">
+      <label for="AreSatisfiedNo">Нет</label>
+      <input required type="radio" name="AreSatisfied" id="AreSatisfiedYesNo" value="I do not know">
+      <label for="AreSatisfiedYesNo">Мне неизвестно</label>
+    </fieldset>  
+    <input type="text" name="WhatToChange" cf-conditional-AreSatisfied="no" cf-questions="Что хотелось бы изменить?"/>
 
-  <fieldset cf-questions="Кушает ли Ваш ребёнок полдник?">
-    <input required type="radio" name="EatsPoldnik" id="EatsPoldnikYes" value="yes">
-    <label for="EatsPoldnikYes">Да</label>
-    <input required type="radio" name="EatsPoldnik" id="EatsPoldnikNo" value="no">
-    <label for="EatsPoldnikNo">Нет</label>
-  </fieldset>  
+    <fieldset cf-questions="По Вашим наблюдениям: пьёт ли ребёнок достаточно воды, предпочитает ли воду?">
+      <input required type="radio" name="DrinkEnough" id="DrinkEnoughYes" value="yes">
+      <label for="DrinkEnoughYes">Да</label>
+      <input required type="radio" name="DrinkEnough" id="DrinkEnoughNo" value="no">
+      <label for="DrinkEnoughNo">Нет</label>
+    </fieldset>  
 
-  <input type="text" name="WhatPrefersForPoldnik" cf-conditional-EatsPoldnik="yes" cf-questions="Что предпочитает на полдник?"/>
-  <input type="text" name="WhyNotPoldnik" cf-conditional-EatsPoldnik="no" cf-questions="Почему?"/>
+    <fieldset cf-questions="Какие напитки ребёнок выбирает в столовой на завтрак?">
+      <input type="checkbox" name="BreakfastDrinks" cf-label="молоко" />
+      <input type="checkbox" name="BreakfastDrinks" cf-label="кефир/ряженка" />
+      <input type="checkbox" name="BreakfastDrinks" cf-label="молочный коктейль" />
+      <input type="checkbox" name="BreakfastDrinks" cf-label="соевое молоко" />
+      <input type="checkbox" name="BreakfastDrinks" cf-label="какао" />
+      <input type="checkbox" name="BreakfastDrinks" cf-label="горячий шоколад" />
+      <input type="checkbox" name="BreakfastDrinks" cf-label="цикорий" />
+      <input type="checkbox" name="BreakfastDrinks" cf-label="чай" />
+      <input type="checkbox" name="BreakfastDrinks" cf-label="вода" />
+    </fieldset>  
 
-  <fieldset cf-questions="Бывают ли у ребёнка жалобы, если он/она занимается физкультурой после обеда?">
-    <input required type="radio" name="ComplainsAfterMeal" id="ComplainsAfterMealYes" value="yes">
-    <label for="EatsPoldnikYes">Да</label>
-    <input required type="radio" name="ComplainsAfterMeal" id="ComplainsAfterMealNo" value="no">
-    <label for="ComplainsAfterMealNo">Нет</label>
-    <input required type="radio" name="ComplainsAfterMeal" id="ComplainsAfterMealNoBut" value="no-but">
-    <label for="ComplainsAfterMealNoBut">Жалоб пока нет, но родителей беспокоит такой график</label>
-  </fieldset>  
+    <fieldset cf-questions="А на обед?">
+      <input type="checkbox" name="LunchDrinks" cf-label="морс (клюква / чёрная смородина / малина)" />
+      <input type="checkbox" name="LunchDrinks" cf-label="компот (клубника / сухофрукты)" />
+      <input type="checkbox" name="LunchDrinks" cf-label="напиток (яблоко, цитрус, шиповник)" />
+      <input type="checkbox" name="LunchDrinks" cf-label="чай" />
+      <input type="checkbox" name="LunchDrinks" cf-label="вода" />
+    </fieldset>  
 
-  <fieldset cf-questions="Есть ли у ребёнка трудности во время приёмов пищи в столовой? (например: боится разбить посуду / переживает, что в очереди его торопят / не успевает выбрать что хотелось бы / не знает что выбрать (незнакомый вид блюд) / боится не успеть и кушает второпях / считает, что нужно обязательно съесть всю порцию…)">
-    <input required type="radio" name="HasDifficulties" id="HasDifficultiesYes" value="yes">
-    <label for="HasDifficultiesYes">Да</label>
-    <input required type="radio" name="HasDifficulties" id="HasDifficultiesNo" value="no">
-    <label for="HasDifficultiesNo">Нет</label>
-  </fieldset>  
-  <input type="text" name="WhatDifficulties" cf-conditional-HasDifficulties="yes" cf-questions="Какие именно?"/>
+    <fieldset cf-questions="А на полдник?">
+      <input type="checkbox" name="PoldnikDrinks" cf-label="кефир/ряженка" />
+      <input type="checkbox" name="PoldnikDrinks" cf-label="чай" />
+      <input type="checkbox" name="PoldnikDrinks" cf-label="вода" />
+    </fieldset>
 
-  <fieldset cf-questions="Как Вы относитесь к идее «Food Education» - периодических занятий «о еде» (о пользе/вреде продуктов, национальных кухнях, составлении рациона, умении выбирать и сочетать продукты), а также занятий, направленных на формирование здоровых отношений с едой?">
-    <input required type="radio" name="FoodEducation" id="FoodEducationYes" value="yes">
-    <label for="FoodEducationYes">Положительно</label>
-    <input required type="radio" name="FoodEducation" id="FoodEducationNo" value="no">
-    <label for="FoodEducationNo">Отрицательно</label>
-  </fieldset>  
-  <input type="text" name="FoodEducation" cf-conditional-FoodEducation="no" cf-questions="Расскажите почему?"/>
+    <fieldset cf-questions="По Вашим наблюдениям: много ли сахара в рационе Вашего ребёнка (в школе и дома)?">
+      <input required type="radio" name="TooMuchSugar" id="TooMuchSugarYes" value="yes">
+      <label for="TooMuchSugarYes">Да</label>
+      <input required type="radio" name="TooMuchSugar" id="TooMuchSugarNo" value="no">
+      <label for="TooMuchSugarNo">Нет</label>
+    </fieldset>  
 
-  <fieldset cf-questions="Какие акценты в питании младших школьников Вам импонируют?">
-    <input type="checkbox" name="Accents" cf-label="Просто вкусная еда из качественных продуктов" />
-    <input type="checkbox" name="Accents" cf-label="Уход от добавленного сахара" />
-    <input type="checkbox" name="Accents" cf-label="Минимальная кулинарная обработка" />
-    <input type="checkbox" name="Accents" cf-label="Рацион, составленный при поддержке профессионального нутрициолога" />
-    <input type="checkbox" name="Accents" cf-label="Разнообразие по принципу «здоровой тарелки»" />	  
-  </fieldset>  
+    <fieldset cf-conditional-TooMuchSugar="no" cf-questions="Как Вы это объясняете?">
+      <input required type="radio" name="WhyNotTooMuchSugar" id="WhyNotTooMuchSugar1" value="Don't think about sugar">
+      <label for="WhyNotTooMuchSugar1">Мы не думаем о сахаре и не считаем количество</label>
+      <input required type="radio" name="WhyNotTooMuchSugar" id="WhyNotTooMuchSugar2" value="Don't like sugar">
+      <label for="WhyNotTooMuchSugar2">Ребёнок не любит сахар/сладкое</label>
+      <input required type="radio" name="WhyNotTooMuchSugar" id="WhyNotTooMuchSugar3" value="Can measure sugar">
+      <label for="WhyNotTooMuchSugar3">Ребёнок ест сахар/сладкое, но научен его дозировать</label>    
+    </fieldset>  
 
-  <fieldset cf-questions="Ещё?">
-    <input required type="radio" name="NeedOtherAccents" id="FoodEducationYes" value="yes">
-    <label for="NeedOtherAccentsYes">Да</label>
-    <input required type="radio" name="NeedOtherAccents" id="FoodEducationNo" value="no">
-    <label for="NeedOtherAccentsNo">Нет</label>
-  </fieldset>  
-  <input type="textarea" name="OtherAccents" cf-conditional-NeedOtherAccents="yes" cf-questions="Какие?"/>
-	
-  <fieldset cf-questions="Хотите представиться?">
-    <input required type="radio" name="NeedName" id="NeedNameYes" value="yes">
-    <label for="NeedNameYes">Да</label>
-    <input required type="radio" name="NeedName" id="NeedNameNo" value="no">
-    <label for="NeedNameNo">Нет</label>
-  </fieldset>  
- 
-  <input type="text" name="Name" cf-conditional-NeedName="yes" cf-questions="Как зовут Вашего ребенка?"/>
-  
-  <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
-  <!--input type="submit" value="Save Responses" /-->
-  <cf-robot-message cf-questions="Огромное спасибо!"></cf-robot-message>
-</form>
+    <input type="text" name="WhyTooMuchSugar" cf-conditional-TooMuchSugar="yes" cf-questions="Расскажите почему?"/>
+    
+    <fieldset cf-questions="Спокойно ли Ваш ребёнок относится к сахару и десертам?">
+      <input required type="radio" name="IsSugarIndifferent" id="IsSugarIndifferentYes" value="yes">
+      <label for="IsSugarIndifferentYes">Да</label>
+      <input required type="radio" name="IsSugarIndifferent" id="IsSugarIndifferentNo" value="no">
+      <label for="IsSugarIndifferentNo">Нет</label>
+    </fieldset>  
+    <input type="text" name="AfterSugar" cf-conditional-IsSugarIndifferent="no" cf-questions="Что Вы замечаете?"/>
 
+    <fieldset cf-questions="По Вашим наблюдениям (и в школе, и дома): ребёнок питается разнообразно или Вам бы хотелось расширения рациона/изменений?">
+      <input required type="radio" name="NeedRationExpansion" id="NeedRationExpansionNo" value="everything is ok">
+      <label for="NeedRationExpansionNo">Всё хорошо</label>
+      <input required type="radio" name="NeedRationExpansion" id="NeedRationExpansionYes" value="need ration expansion">
+      <label for="NeedRationExpansionYes">Нужны изменения</label>
+    </fieldset>  
+    <input type="text" name="NeedRationExpansion" cf-conditional-NeedRationExpansion="need ration expansion" cf-questions="Какие именно?"/>
+
+    <fieldset cf-questions="Кушает ли Ваш ребёнок полдник?">
+      <input required type="radio" name="EatsPoldnik" id="EatsPoldnikYes" value="yes">
+      <label for="EatsPoldnikYes">Да</label>
+      <input required type="radio" name="EatsPoldnik" id="EatsPoldnikNo" value="no">
+      <label for="EatsPoldnikNo">Нет</label>
+    </fieldset>  
+
+    <input type="text" name="WhatPrefersForPoldnik" cf-conditional-EatsPoldnik="yes" cf-questions="Что предпочитает на полдник?"/>
+    <input type="text" name="WhyNotPoldnik" cf-conditional-EatsPoldnik="no" cf-questions="Почему?"/>
+
+    <fieldset cf-questions="Бывают ли у ребёнка жалобы, если он/она занимается физкультурой после обеда?">
+      <input required type="radio" name="ComplainsAfterMeal" id="ComplainsAfterMealYes" value="yes">
+      <label for="EatsPoldnikYes">Да</label>
+      <input required type="radio" name="ComplainsAfterMeal" id="ComplainsAfterMealNo" value="no">
+      <label for="ComplainsAfterMealNo">Нет</label>
+      <input required type="radio" name="ComplainsAfterMeal" id="ComplainsAfterMealNoBut" value="no-but">
+      <label for="ComplainsAfterMealNoBut">Жалоб пока нет, но родителей беспокоит такой график</label>
+    </fieldset>  
+
+    <fieldset cf-questions="Есть ли у ребёнка трудности во время приёмов пищи в столовой? (например: боится разбить посуду / переживает, что в очереди его торопят / не успевает выбрать что хотелось бы / не знает что выбрать (незнакомый вид блюд) / боится не успеть и кушает второпях / считает, что нужно обязательно съесть всю порцию…)">
+      <input required type="radio" name="HasDifficulties" id="HasDifficultiesYes" value="yes">
+      <label for="HasDifficultiesYes">Да</label>
+      <input required type="radio" name="HasDifficulties" id="HasDifficultiesNo" value="no">
+      <label for="HasDifficultiesNo">Нет</label>
+    </fieldset>  
+    <input type="text" name="WhatDifficulties" cf-conditional-HasDifficulties="yes" cf-questions="Какие именно?"/>
+
+    <fieldset cf-questions="Как Вы относитесь к идее «Food Education» - периодических занятий «о еде» (о пользе/вреде продуктов, национальных кухнях, составлении рациона, умении выбирать и сочетать продукты), а также занятий, направленных на формирование здоровых отношений с едой?">
+      <input required type="radio" name="FoodEducation" id="FoodEducationYes" value="yes">
+      <label for="FoodEducationYes">Положительно</label>
+      <input required type="radio" name="FoodEducation" id="FoodEducationNo" value="no">
+      <label for="FoodEducationNo">Отрицательно</label>
+    </fieldset>  
+    <input type="text" name="FoodEducation" cf-conditional-FoodEducation="no" cf-questions="Расскажите почему?"/>
+
+    <fieldset cf-questions="Какие акценты в питании младших школьников Вам импонируют?">
+      <input type="checkbox" name="Accents" cf-label="Просто вкусная еда из качественных продуктов" />
+      <input type="checkbox" name="Accents" cf-label="Уход от добавленного сахара" />
+      <input type="checkbox" name="Accents" cf-label="Минимальная кулинарная обработка" />
+      <input type="checkbox" name="Accents" cf-label="Рацион, составленный при поддержке профессионального нутрициолога" />
+      <input type="checkbox" name="Accents" cf-label="Разнообразие по принципу «здоровой тарелки»" />	  
+    </fieldset>  
+
+    <fieldset cf-questions="Ещё?">
+      <input required type="radio" name="NeedOtherAccents" id="FoodEducationYes" value="yes">
+      <label for="NeedOtherAccentsYes">Да</label>
+      <input required type="radio" name="NeedOtherAccents" id="FoodEducationNo" value="no">
+      <label for="NeedOtherAccentsNo">Нет</label>
+    </fieldset>  
+    <input type="textarea" name="OtherAccents" cf-conditional-NeedOtherAccents="yes" cf-questions="Какие?"/>
+
+    <fieldset cf-questions="Хотите представиться?">
+      <input required type="radio" name="NeedName" id="NeedNameYes" value="yes">
+      <label for="NeedNameYes">Да</label>
+      <input required type="radio" name="NeedName" id="NeedNameNo" value="no">
+      <label for="NeedNameNo">Нет</label>
+    </fieldset>  
+
+    <input type="text" name="Name" cf-conditional-NeedName="yes" cf-questions="Как зовут Вашего ребенка?"/>
+
+    <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+    <!--input type="submit" value="Save Responses" /-->
+    <cf-robot-message cf-questions="Огромное спасибо!"></cf-robot-message>
+  </form>
 </body>
 </html>
