@@ -60,7 +60,7 @@
     <input type="text" name="FoodAllergens" cf-conditional-HasFoodAllergy="yes" cf-questions="На какие продукты?"/>
 
     <fieldset cf-questions="Есть ли у ребёнка другая форма аллергии (НЕпищевая)?">
-      <input required type="radio" name="HasOtherAllergy" id="HasOtherAllergyYes" value="yes">
+      <input required type="radio" name="HasOtherAllergy" iljd="HasOtherAllergyYes" value="yes">
       <label for="HasOtherAllergyYes">Да</label>
       <input required type="radio" name="HasOtherAllergy" id="HasOtherAllergyNo" value="no">
       <label for="HasOtherAllergyNo">Нет</label>
@@ -117,9 +117,9 @@
     </fieldset>  
     <input type="text" name="WhatToChange" cf-conditional-AreSatisfied="no" cf-questions="Что хотелось бы изменить?"/>
 
-    <fieldset cf-questions="Вы довольны рационом ребенка в школе (тем, что он ест и как сочетает продукты)?">
+    <fieldset cf-questions="Школьная столовая как-то изменила пищевые привычки ребёнка?">
       <input required type="radio" name="FoodRoutineChanged"cf-label="Да" value="yes">
-      <input required type="radio" name="FoodRoutineChanged" cf-label="Нет" value="no">
+      <input required type="radio" name="FoodRoutineChanged" cf-label="Нет, всё по-старому" value="no">
     </fieldset>  
     <input type="text" name="FoodRoutineChanges" cf-conditional-FoodRoutineChanged="yes" cf-questions="Как именно?"/>
 
