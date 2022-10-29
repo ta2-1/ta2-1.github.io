@@ -117,7 +117,7 @@
     </fieldset>  
     <input type="text" name="WhatToChange" cf-conditional-AreSatisfied="no" cf-questions="Что хотелось бы изменить?"/>
 
-    <fieldset cf-questions="Вы довольны рационом ребенка в школе? (тем, что он ест и как сочетает продукты)">
+    <fieldset cf-questions="Вы довольны рационом ребенка в школе (тем, что он ест и как сочетает продукты)?">
       <input required type="radio" name="FoodRoutineChanged"cf-label="Да" value="yes">
       <input required type="radio" name="FoodRoutineChanged" cf-label="Нет" value="no">
     </fieldset>  
@@ -165,7 +165,7 @@
       <label for="TooMuchSugarAtHomeNo">Нет, немного</label>
     </fieldset>  
 
-    <fieldset cf-questions="А в школьном рационе много?">
+    <fieldset cf-questions="А в школьном рационе много (добавленного) сахара?">
       <input required type="radio" name="TooMuchSugarAtSchool" id="TooMuchSugarAtSchoolYes" value="no thoughts">
       <label for="TooMuchSugarAtSchoolYes">Не думаем о сахаре, не следим за количеством</label>
       <input required type="radio" name="TooMuchSugarAtSchool" id="TooMuchSugarAtHomeYes" value="yes">
@@ -174,11 +174,13 @@
       <label for="TooMuchSugarAtHomeNo">Нет, немного</label>
     </fieldset>
     
-    <fieldset cf-conditional-TooMuchSugar="no" cf-questions="Как Вы это объясняете?">
-      <input cf-conditional-TooMuchSugar="no" type="radio" name="WhyNotTooMuchSugar" id="WhyNotTooMuchSugar2" value="Don't like sugar">
-      <label for="WhyNotTooMuchSugar2">Ребёнок не любит сахар/сладкое</label>
-      <input cf-conditional-TooMuchSugar="no" type="radio" name="WhyNotTooMuchSugar" id="WhyNotTooMuchSugar3" value="Can measure sugar">
-      <label for="WhyNotTooMuchSugar3">Ребёнок ест сахар/сладкое, но научен его дозировать</label>    
+    <fieldset cf-conditional-TooMuchSugarAtSchool="no" cf-questions="Как Вы это объясняете?">
+      <input cf-conditional-TooMuchSugarAtSchool="no" type="radio" name="WhyNotTooMuchSugar" id="WhyNotTooMuchSugar1" value="Don't like sugar">
+      <label for="WhyNotTooMuchSugar1">Ребёнок не любит сахар/сладкое</label>
+      <input cf-conditional-TooMuchSugarAtSchool="no" type="radio" name="WhyNotTooMuchSugar" id="WhyNotTooMuchSugar2" value="Can measure sugar">
+      <label for="WhyNotTooMuchSugar2">Ребёнок ест сахар/сладкое, но научен его дозировать</label>
+      <input cf-conditional-TooMuchSugarAtSchool="no" type="radio" name="WhyNotTooMuchSugar" id="WhyNotTooMuchSugar3" value="Believe in few sugar">
+      <label for="WhyNotTooMuchSugar3">Я верю, что в школьных блюдах мало сахара в принципе</label>    
     </fieldset>  
 
     <fieldset cf-questions="Спокойно ли Ваш ребёнок относится к сахару и десертам?">
