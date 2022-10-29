@@ -5,21 +5,31 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@1.0.1/dist/conversational-form.min.js" crossorigin></script>
     <link rel="stylesheet" href="https://space10-community.github.io/conversational-form/landingpage/main.d7d27bd6.css">
     <script type="text/javascript">
-      var data = {      
-        "entry-not-found": "Элемент не найден",
-        "input-placeholder": "Введите свой ответ здесь",                 
-        "group-placeholder": "...",                         
-        "input-placeholder-required": "Обязательно нужно что-то ввести", 
-        "input-no-filter": "Ничего не найдено по запросу ‛{input-value}‛",         
-        "user-reponse-and": " и ",                                       
-        "user-reponse-missing": "Ответ пропущен ...",                       
-        "user-reponse-missing-group": "Ничего не выбрано ..."
+      window.onload = function() {
+        var data = {      
+          "entry-not-found": "Элемент не найден",
+          "input-placeholder": "Введите свой ответ здесь",                 
+          "group-placeholder": "...",                         
+          "input-placeholder-required": "Обязательно нужно что-то ввести", 
+          "input-no-filter": "Ничего не найдено по запросу ‛{input-value}‛",         
+          "user-reponse-and": " и ",                                       
+          "user-reponse-missing": "Ответ пропущен ...",                       
+          "user-reponse-missing-group": "Ничего не выбрано ..."
+        };
+        var conversationalForm = window.cf.ConversationalForm.startTheConversation({
+          formEl: document.getElementById("form"),
+          dictionaryData: data,
+          userImage: "https://thumbs.dreamstime.com/b/%D0%BC%D0%B0%D0%BB%D0%B5%D0%BD%D1%8C%D0%BA%D0%B8%D0%B9-%D1%80%D0%BE%D0%B1%D0%BE%D1%82-%D0%BF%D0%BE%D0%B2%D0%B0%D1%80-%D0%B4%D0%B5%D1%80%D0%B6%D0%B0-%D0%BF%D1%80%D0%B8%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BA%D0%B0%D1%81%D1%82%D1%80%D1%8E%D0%BB%D1%8F-d-%D1%80%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D0%B8%D0%BD%D0%B3-%D0%BF%D0%B0%D0%BD-219279508.jpg",
+          submitCallback: function() {
+           conversationalForm.addRobotChatResponse("Ваши ответы сохранены."); 
+          }
+        });
       };
     </script>
   </head>
   <body>
   
-  <form class="form" action="https://api.sheetmonkey.io/form/co9dz6kzLvUf7JZ9Q4MVhj" method="post" cf-form dictionaryData=data>
+  <form id="form" class="form" action="https://api.sheetmonkey.io/form/co9dz6kzLvUf7JZ9Q4MVhj" method="post" cf-form dictionaryData=data>
     <cf-robot-message cf-questions="Спасибо, что Вы с нами!"></cf-robot-message>
     <cf-robot-message cf-questions="Мы начинаем)"></cf-robot-message>
 
