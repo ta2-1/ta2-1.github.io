@@ -21,7 +21,8 @@
           dictionaryData: data,
           robotImage: "./robot.svg",
           submitCallback: function() {
-           conversationalForm.addRobotChatResponse("Ваши ответы сохранены."); 
+            document.getElementById("form").submit(); 
+            conversationalForm.addRobotChatResponse("Ваши ответы сохранены."); 
           }
         });
       };
@@ -131,29 +132,35 @@
     </fieldset>  
 
     <fieldset cf-questions="Какие напитки ребёнок выбирает в столовой на завтрак?">
-      <input type="checkbox" name="BreakfastDrinks" cf-label="молоко" />
-      <input type="checkbox" name="BreakfastDrinks" cf-label="кефир/ряженка" />
-      <input type="checkbox" name="BreakfastDrinks" cf-label="молочный коктейль" />
-      <input type="checkbox" name="BreakfastDrinks" cf-label="соевое молоко" />
-      <input type="checkbox" name="BreakfastDrinks" cf-label="какао" />
-      <input type="checkbox" name="BreakfastDrinks" cf-label="горячий шоколад" />
-      <input type="checkbox" name="BreakfastDrinks" cf-label="цикорий" />
-      <input type="checkbox" name="BreakfastDrinks" cf-label="чай" />
-      <input type="checkbox" name="BreakfastDrinks" cf-label="вода" />
+      <select name="BreakfastDrinks" multiple>
+        <option value="молоко">молоко</option>
+        <option value="кефир/ряженка">кефир/ряженка</option>
+        <option value="молочный коктейль">молочный коктейль</option>
+        <option value="соевое молоко">соевое молоко</option>
+        <option value="какао">какао</option>
+        <option value="горячий шоколад">горячий шоколад</option>
+        <option value="цикорий">цикорий</option>
+        <option value="чай">чай</option>
+        <option value="вода">вода</option>
+      </select>
     </fieldset>  
 
     <fieldset cf-questions="А на обед?">
-      <input type="checkbox" name="LunchDrinks" cf-label="морс (клюква / чёрная смородина / малина)" />
-      <input type="checkbox" name="LunchDrinks" cf-label="компот (клубника / сухофрукты)" />
-      <input type="checkbox" name="LunchDrinks" cf-label="напиток (яблоко, цитрус, шиповник)" />
-      <input type="checkbox" name="LunchDrinks" cf-label="чай" />
-      <input type="checkbox" name="LunchDrinks" cf-label="вода" />
+      <select name="LunchDrinks" multiple>
+        <option value="морс (клюква / чёрная смородина / малина)">морс (клюква / чёрная смородина / малина)</option>
+        <option value="компот (клубника / сухофрукты)">компот (клубника / сухофрукты)</option>
+        <option value="напиток (яблоко, цитрус, шиповник)">напиток (яблоко, цитрус, шиповник)</option>
+        <option value="чай">чай</option>
+        <option value="вода">вода</option>
+      </select>
     </fieldset>  
 
     <fieldset cf-questions="А на полдник?">
-      <input type="checkbox" name="PoldnikDrinks" cf-label="кефир/ряженка" />
-      <input type="checkbox" name="PoldnikDrinks" cf-label="чай" />
-      <input type="checkbox" name="PoldnikDrinks" cf-label="вода" />
+      <select name="PoldnikDrinks" multiple>
+        <option value="кефир/ряженка">кефир/ряженка</option>
+        <option value="чай">чай</option>
+        <option value="вода">вода</option>
+      </select>
     </fieldset>
 
     <fieldset cf-questions="По Вашим наблюдениям: дома в рационе ребёнка много (добавленного) сахара?">
@@ -239,17 +246,25 @@
     <input type="text" name="FoodEducation" cf-conditional-FoodEducation="no" cf-questions="Расскажите почему?"/>
 
     <fieldset cf-questions="Что в питании младших школьников для Вас важно?">
-      <input type="checkbox" name="Accents" cf-label="Просто вкусная еда из качественных продуктов" />
-      <input type="checkbox" name="Accents" cf-label="Уход от добавленного сахара" />
-      <input type="checkbox" name="Accents" cf-label="Минимальная кулинарная обработка" />
-      <input type="checkbox" name="Accents" cf-label="Рацион, составленный при поддержке профессионального нутрициолога" />
-      <input type="checkbox" name="Accents" cf-label="Разнообразие по принципу «здоровой тарелки»" />
-      <input type="checkbox" name="Accents" cf-label="Что-то другое" />	  
+      <select name="Accents" multiple>
+        <option value="Просто вкусная еда из качественных продуктов">Просто вкусная еда из качественных продуктов</option>
+        <option value="Уход от добавленного сахара">Уход от добавленного сахара</option>
+        <option value="Минимальная кулинарная обработка">Минимальная кулинарная обработка</option>
+        <option value="Рацион, составленный при поддержке профессионального нутрициолога">Рацион, составленный при поддержке профессионального нутрициолога</option>
+        <option value="Разнообразие по принципу «здоровой тарелки»">Разнообразие по принципу «здоровой тарелки»</option>
+        <option value="Добавить свой вариант">Добавить свой вариант</option>
+      </select>
     </fieldset>  
     
-    <input type="textarea" name="OtherAccents" cf-conditional-Accents="^другое$" cf-questions="Какие?"/>
+    <input type="textarea" name="OtherAccents" cf-conditional-Accents="^Добавить$" cf-input-placeholder="Напишите свой вариант"/>
     
-    <cf-robot-message cf-questions="Мы почти закончили"></cf-robot-message>
+    <fieldset cf-questions="Хотите оставить свой комментарий?">
+      <input required type="radio" name="WantToComment" cf-label="Да" value="yes">
+      <input required type="radio" name="WantToComment" cf-label="Нет" value="no">
+    </fieldset>  
+    <input type="text" name="CustomComment" cf-conditional-WantToComment="yes" cf-input-placeholder="Напишите свой комментарий"/>
+
+    <cf-robot-message cf-questions="Мы почти закончили!"></cf-robot-message>
     
     <fieldset cf-questions="Хотите представиться?">
       <input required type="radio" name="NeedName" id="NeedNameYes" value="yes">
