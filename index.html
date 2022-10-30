@@ -189,16 +189,20 @@
     </fieldset>  
     
     <fieldset cf-questions="Ваш ребёнок ест полдник?">
-      <input required type="radio" name="EatsPoldnik" id="EatsPoldnikYes" value="Да">
-      <label for="EatsPoldnikYes">Да</label>
-      <input required type="radio" name="EatsPoldnik" id="EatsPoldnikNo" value="Нет">
-      <label for="EatsPoldnikNo">Нет</label>
-    </fieldset>  
-
-    <input type="text" name="WhatPrefersForPoldnik" cf-conditional-EatsPoldnik="Да" cf-questions="Что предпочитает на полдник?"/>
+      <input required type="radio" name="EatsPoldnikAtSchool" cf-label="Да" value="Да">
+      <input required type="radio" name="EatsPoldnikAtSchool" cf-label="Нет" value="Нет">
+    </fieldset>
+	
+    <input type="text" name="WhatPrefersForPoldnikAtSchool" cf-conditional-EatsPoldnikAtSchool="Да" cf-questions="Что выбирает на полдник?"/>
     <input type="text" name="WhyNotPoldnik" cf-conditional-EatsPoldnik="Нет" cf-questions="Почему?"/>
 
-    <fieldset cf-questions="Бывают ли у ребёнка жалобы, если физкультура сразу после обеда?">
+    <fieldset cf-questions="А дома бывают полдники?">
+      <input required type="radio" name="EatsPoldnikAtHome" cf-label="Да" value="Да">
+      <input required type="radio" name="EatsPoldnikAtHome" cf-label="Нет" value="Нет">
+    </fieldset>
+	<input type="text" name="WhatPrefersForPoldnikAtHome" cf-conditional-EatsPoldnikAtHome="Да" cf-questions="Что ребенок обычно ест на полдник дома?"/>
+    
+	<fieldset cf-questions="Бывают ли у ребёнка жалобы, если физкультура сразу после обеда?">
       <input required type="radio" name="ComplainsAfterMeal" id="ComplainsAfterMealYes" value="Да">
       <label for="EatsPoldnikYes">Да</label>
       <input required type="radio" name="ComplainsAfterMeal" id="ComplainsAfterMealNo" value="Нет">
@@ -215,7 +219,18 @@
       <label for="HasDifficultiesNo">Нет</label>
     </fieldset>  
     
-    <input type="text" name="WhatDifficulties" cf-conditional-HasDifficulties="Да" cf-questions="Какие именно?"/>
+    <fieldset cf-questions="Какие именно?">
+      <select name="WhatDifficulties" cf-conditional-HasDifficulties="Да" multiple>
+        <option value="Боится разбить посуду">боится разбить посуду</option>
+        <option value="Переживает, что в очереди торопят"></option>
+        <option value="Не успевает выбрать что хотелось бы"></option>
+        <option value="Незнакомый вид блюд — не знает, что выбрать"></option>
+        <option value="Боится не успеть, ест второпях"></option>
+        <option value="Считает, что всю порцию нужно съесть"></option>
+        <option value="Другое">Добавить свой вариант</option>
+      </select>
+    </fieldset>  
+    <input type="textarea" name="OtherDifficulties" cf-conditional-WhatDifficulties="Другое" cf-questions="Напишите, пожалуйста, свой вариант"/>
     
     <fieldset cf-questions="Как Вы относитесь к идее «Food Education» - периодических занятий «о еде» (о пользе/вреде продуктов, национальных кухнях, составлении рациона, умении выбирать и сочетать продукты), а также занятий, направленных на формирование здоровых отношений с едой?">
       <input required type="radio" name="FoodEducation" id="FoodEducationYes" value="Да">
@@ -236,7 +251,7 @@
       </select>
     </fieldset>  
     
-    <input type="textarea" name="OtherAccents" cf-conditional-Accents="Другое" cf-questions="Напишите свой вариант"/>
+    <input type="textarea" name="OtherAccents" cf-conditional-Accents="Другое" cf-questions="Напишите, пожалуйста, свой вариант"/>
     
     <fieldset cf-questions="Хотите оставить свой комментарий?">
       <input required type="radio" name="WantToComment" cf-label="Да" value="Да">
