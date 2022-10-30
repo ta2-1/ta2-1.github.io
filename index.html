@@ -20,7 +20,7 @@
         var conversationalForm = window.cf.ConversationalForm.startTheConversation({
           formEl: document.getElementById("form"),
           dictionaryData: data,
-          robotImage: "./robot.svg",
+          robotImage: "./cooker.png",
           submitCallback: function() {
             document.getElementById("form").submit(); 
             conversationalForm.addRobotChatResponse("Ваши ответы сохранены."); 
@@ -91,33 +91,26 @@
     <input type="text" name="FoodExclusions" cf-conditional-HasFoodExclusions="Да" cf-questions="Каких именно?"/>
 
     <fieldset cf-questions="Есть ли продукты в меню столовой, которых – по Вашему мнению – не хватает (совсем нет или мало)?">
-      <input required type="radio" name="NotEnoughFood" id="NotEnoughFoodYes" value="Да">
-      <label for="NotEnoughFoodYes">Да</label>
-      <input required type="radio" name="NotEnoughFood" id="NotEnoughFoodNo" value="Нет">
-      <label for="NotEnoughFoodNo">Нет</label>
+      <input required type="radio" name="AnyMissingProducts" cf-label="Да" value="Да">
+      <input required type="radio" name="AnyMissingProducts" cf-label="Нет" value="Нет">
     </fieldset>  
-    <input type="text" name="RequestedFood" cf-conditional-NotEnoughFood="Да" cf-questions="Каких именно?"/>
+    <input type="text" name="MissingProducts" cf-conditional-AnyMissingProducts="Да" cf-questions="Каких именно?"/>
 
-    <input type="text" name="KidsFoodDreams" cf-conditional-NotEnoughFood="Да" cf-questions="Спросите, пожалуйста, ребёнка ☺ — какие продукты было бы здорово добавить в меню столовой?"/>
+    <input type="text" name="KidsFoodDreams" cf-questions="Спросите, пожалуйста, ребёнка ☺ — какие продукты было бы здорово добавить в меню столовой?"/>
 
     <fieldset cf-questions="Обсуждаете ли Вы «меню на день» с ребёнком перед школой?">
-      <input required type="radio" name="HaveDiscussions" id="HaveDiscussionsYes" value="Да">
-      <label for="HaveDiscussionsYes">Обсуждаем вместе заранее</label>
-      <input required type="radio" name="HaveDiscussions" id="HaveDiscussionsNo" value="Нет">
-      <label for="HaveDiscussionsNo">Нет, ребёнок делает выбор уже в столовой</label>
-      <input required type="radio" name="HaveDiscussions" id="HaveDiscussionsBoth" value="Бывают оба варианта">
-      <label for="HaveDiscussionsBoth">Бывают оба варианта</label>
+      <input required type="radio" name="MenuTalksInAdvance" cf-label="Обсуждаем вместе заранее" value="Да">
+      <input required type="radio" name="MenuTalksInAdvance" cf-label="Нет, ребёнок делает выбор уже в столовой" value="Нет">
+      <input required type="radio" name="MenuTalksInAdvance" cf-label="Бывают оба варианта" value="Бывают оба варианта">
     </fieldset>  
 
     <fieldset cf-questions="Вы довольны рационом ребенка в школе (тем, что он ест и как сочетает продукты)?">
-      <input required type="radio" name="AreSatisfied" id="AreSatisfiedYes" value="Да">
-      <label for="AreSatisfiedYes">Да</label>
-      <input required type="radio" name="AreSatisfied" id="AreSatisfiedNo" value="Нет">
-      <label for="AreSatisfiedNo">Нет</label>
-      <input required type="radio" name="AreSatisfied" id="AreSatisfiedYesNo" value="Не знаю">
+      <input required type="radio" name="RationSatisfied" cf-label="Да" value="Да">
+      <input required type="radio" name="RationSatisfied" cf-label="Нет" value="Нет">
+      <input required type="radio" name="RationSatisfied" cf-label="Не знаю" value="Не знаю">
       <label for="AreSatisfiedYesNo">Я не знаю, что он там ест ☺</label>
     </fieldset>  
-    <input type="text" name="WhatToChange" cf-conditional-AreSatisfied="Нет" cf-questions="Что хотелось бы изменить?"/>
+    <input type="text" name="WhatToChange" cf-conditional-RationSatisfied="Нет" cf-questions="Что хотелось бы изменить?"/>
     
     <fieldset cf-questions="Школьная столовая как-то изменила пищевые привычки ребёнка?">
       <input required type="radio" name="FoodRoutineChanged"cf-label="Да" value="Да">
@@ -126,10 +119,8 @@
     <input type="text" name="FoodRoutineChanges" cf-conditional-FoodRoutineChanged="Да" cf-questions="Как именно?"/>
 
     <fieldset cf-questions="По Вашим наблюдениям: ребёнок пьёт достаточно воды?">
-      <input required type="radio" name="DrinkEnough" id="DrinkEnoughYes" value="Да">
-      <label for="DrinkEnoughYes">Да</label>
-      <input required type="radio" name="DrinkEnough" id="DrinkEnoughNo" value="Нет">
-      <label for="DrinkEnoughNo">Нет</label>
+      <input required type="radio" name="WaterEnough" cf-label="Да" value="Да">
+      <input required type="radio" name="WaterEnough" cf-label="Нет" value="Нет">
     </fieldset>  
 
     <fieldset cf-questions="Какие напитки ребёнок выбирает в столовой на завтрак?">
