@@ -199,11 +199,11 @@
     </fieldset>  
     <input type="text" name="AfterSugar" cf-conditional-IsSugarIndifferent="no" cf-questions="Как это проявляется?"/>
 
-    <fieldset cf-questions="По Вашим наблюдениям (и в школе, и дома): ребёнок питается разнообразно или хотелось бы расширения рациона?">
+    <fieldset cf-questions="По Вашим наблюдениям (и в школе, и дома): ребёнок питается разнообразно?">
       <input required type="radio" name="NeedRationExpansion" id="NeedRationExpansionNo" value="everything is ok">
       <label for="NeedRationExpansionNo">Всё хорошо</label>
       <input required type="radio" name="NeedRationExpansion" id="NeedRationExpansionYes" value="need ration expansion">
-      <label for="NeedRationExpansionYes">Нужны изменения</label>
+      <label for="NeedRationExpansionYes">Нет, хотелось бы расширения рациона</label>
     </fieldset>  
     
     <fieldset cf-questions="Ваш ребёнок ест полдник?">
@@ -226,10 +226,7 @@
     </fieldset>  
     
     <cf-robot-message cf-questions="Есть ли у ребёнка трудности в столовой?"></cf-robot-message>
-    <cf-robot-message cf-questions="Например:"></cf-robot-message>
-    <cf-robot-message cf-questions="&#8226; боится разбить посуду <br/>&#8226; переживает, что в очереди торопят<br/>&#8226; не успевает выбрать что хотелось бы<br/>&#8226; незнакомый вид блюд — не знает, что выбрать<br/>&#8226; боится не успеть, ест второпях<br/>&#8226; считает, что всю порцию нужно съесть"></cf-robot-message>
-         
-    <fieldset cf-questions="">
+    <fieldset cf-questions="Например:<br/> &#8226; боится разбить посуду <br/>&#8226; переживает, что в очереди торопят<br/>&#8226; не успевает выбрать что хотелось бы<br/>&#8226; незнакомый вид блюд — не знает, что выбрать<br/>&#8226; боится не успеть, ест второпях<br/>&#8226; считает, что всю порцию нужно съесть">     
       <input required type="radio" name="HasDifficulties" id="HasDifficultiesYes" value="yes">
       <label for="HasDifficultiesYes">Да</label>
       <input required type="radio" name="HasDifficulties" id="HasDifficultiesNo" value="no">
