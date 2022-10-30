@@ -20,7 +20,7 @@
         var conversationalForm = window.cf.ConversationalForm.startTheConversation({
           formEl: document.getElementById("form"),
           dictionaryData: data,
-          robotImage: "./cooker2.png",
+          robotImage: "./robot.svg",
           submitCallback: function() {
             document.getElementById("form").submit(); 
             conversationalForm.addRobotChatResponse("Ваши ответы сохранены."); 
@@ -107,8 +107,7 @@
     <fieldset cf-questions="Вы довольны рационом ребенка в школе (тем, что он ест и как сочетает продукты)?">
       <input required type="radio" name="RationSatisfied" cf-label="Да" value="Да">
       <input required type="radio" name="RationSatisfied" cf-label="Нет" value="Нет">
-      <input required type="radio" name="RationSatisfied" cf-label="Не знаю" value="Не знаю">
-      <label for="AreSatisfiedYesNo">Я не знаю, что он там ест ☺</label>
+      <input required type="radio" name="RationSatisfied" cf-label="Я не знаю, что он там ест ☺" value="Не знаю">
     </fieldset>  
     <input type="text" name="WhatToChange" cf-conditional-RationSatisfied="Нет" cf-questions="Что хотелось бы изменить?"/>
     
@@ -173,7 +172,7 @@
       <input cf-conditional-TooMuchSugarAtSchool="Нет" type="radio" name="WhyNotTooMuchSugar" id="WhyNotTooMuchSugar2" value="Научен его дозировать">
       <label for="WhyNotTooMuchSugar2">Ребёнок ест сахар/сладкое, но научен его дозировать</label>
       <input cf-conditional-TooMuchSugarAtSchool="Нет" type="radio" name="WhyNotTooMuchSugar" id="WhyNotTooMuchSugar3" value="В школьных блюдах мало сахара">
-      <label for="WhyNotTooMuchSugar3">Я верю, что в школьных блюдах мало сахара в принципе</label>    
+      <label for="WhyNotTooMuchSugar3">Я думаю, что в школьных блюдах мало сахара в принципе</label>    
     </fieldset>  
 
     <fieldset cf-questions="Спокойно ли Ваш ребёнок относится к сахару и десертам?">
@@ -209,7 +208,7 @@
     </fieldset>  
     
     <cf-robot-message cf-questions="Есть ли у ребёнка трудности в столовой?"></cf-robot-message>
-    <fieldset cf-questions="Например:<br/> &#8226; боится разбить посуду <br/>&#8226; переживает, что в очереди торопят<br/>&#8226; не успевает выбрать что хотелось бы<br/>&#8226; незнакомый вид блюд — не знает, что выбрать<br/>&#8226; боится не успеть, ест второпях<br/>&#8226; считает, что всю порцию нужно съесть">     
+    <fieldset cf-questions="Например:<br/>&#8226; боится разбить посуду <br/>&#8226; переживает, что в очереди торопят<br/>&#8226; не успевает выбрать что хотелось бы<br/>&#8226; незнакомый вид блюд — не знает, что выбрать<br/>&#8226; боится не успеть, ест второпях<br/>&#8226; считает, что всю порцию нужно съесть...">     
       <input required type="radio" name="HasDifficulties" id="HasDifficultiesYes" value="Да">
       <label for="HasDifficultiesYes">Да</label>
       <input required type="radio" name="HasDifficulties" id="HasDifficultiesNo" value="Нет">
@@ -243,7 +242,7 @@
       <input required type="radio" name="WantToComment" cf-label="Да" value="Да">
       <input required type="radio" name="WantToComment" cf-label="Нет" value="Нет">
     </fieldset>  
-    <input type="text" name="CustomComment" cf-conditional-WantToComment="Да" cf-questions="Напишите свой комментарий"/>
+    <input type="text" name="CustomComment" cf-conditional-WantToComment="Да" cf-questions="Напишите, пожалуйста)"/>
 
     <cf-robot-message cf-questions="Мы почти закончили!"></cf-robot-message>
     
