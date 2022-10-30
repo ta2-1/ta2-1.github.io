@@ -110,15 +110,15 @@
     </fieldset>  
 
     <fieldset cf-questions="Вы довольны рационом ребенка в школе (тем, что он ест и как сочетает продукты)?">
-      <input required type="radio" name="AreSatisfied" id="AreSatisfiedYes" value="yes">
+      <input required type="radio" name="AreSatisfied" id="AreSatisfiedYes" value="да">
       <label for="AreSatisfiedYes">Да</label>
-      <input required type="radio" name="AreSatisfied" id="AreSatisfiedNo" value="no">
+      <input required type="radio" name="AreSatisfied" id="AreSatisfiedNo" value="нет">
       <label for="AreSatisfiedNo">Нет</label>
-      <input required type="radio" name="AreSatisfied" id="AreSatisfiedYesNo" value="I don't know">
+      <input required type="radio" name="AreSatisfied" id="AreSatisfiedYesNo" value="не знаю">
       <label for="AreSatisfiedYesNo">Я не знаю, что он там ест ☺</label>
     </fieldset>  
-    <input type="text" name="WhatToChange" cf-conditional-AreSatisfied="no" cf-questions="Что хотелось бы изменить?"/>
-
+    <input type="text" name="WhatToChange" cf-conditional-AreSatisfied="нет" cf-questions="Что хотелось бы изменить?"/>
+    
     <fieldset cf-questions="Школьная столовая как-то изменила пищевые привычки ребёнка?">
       <input required type="radio" name="FoodRoutineChanged"cf-label="Да" value="yes">
       <input required type="radio" name="FoodRoutineChanged" cf-label="Нет, всё по-старому" value="no">
