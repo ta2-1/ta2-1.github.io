@@ -248,13 +248,13 @@
       </select>
     </fieldset>  
     
-    <input type="textarea" name="OtherAccents" cf-conditional-Accents="^Добавить$" cf-input-placeholder="Напишите свой вариант"/>
+    <input type="textarea" name="OtherAccents" cf-conditional-Accents="Добавить" cf-questions="Напишите свой вариант"/>
     
     <fieldset cf-questions="Хотите оставить свой комментарий?">
       <input required type="radio" name="WantToComment" cf-label="Да" value="yes">
       <input required type="radio" name="WantToComment" cf-label="Нет" value="no">
     </fieldset>  
-    <input type="text" name="CustomComment" cf-conditional-WantToComment="yes" cf-input-placeholder="Напишите свой комментарий"/>
+    <input type="text" name="CustomComment" cf-conditional-WantToComment="yes" cf-questions="Напишите свой комментарий"/>
 
     <cf-robot-message cf-questions="Мы почти закончили!"></cf-robot-message>
     
