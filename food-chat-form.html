@@ -119,12 +119,12 @@
       </fieldset>
       <input type="text" name="OtherFoodExclusions" cf-conditional-FoodExclusions="другое" cf-questions="Что именно?"/>
       
-      <fieldset cf-questions="Получается ли соблюдать выбранную диету в школе?" cf-conditional-AnyFoodExclusions="Да">
+      <fieldset cf-questions="Получается ли соблюдать выбранную диету в школе?" cf-conditional-AnyFoodExclusions="Да" cf-conditional-AnyMedicalExclusions="Нет">
         <input required type="radio" name="AbleToKeepADiet" cf-label="Да, всегда" value="Да">
         <input required type="radio" name="AbleToKeepADiet" cf-label="Не каждый день" value="Не каждый день">
         <input required type="radio" name="AbleToKeepADiet" cf-label="Нет" value="Нет">
       </fieldset>
-      <fieldset cf-questions="Получается ли соблюдать выбранную диету в школе?" cf-conditional-AnyMedicalExclusions="Да" cf-conditional-AbleToKeepADiet="">
+      <fieldset cf-questions="Получается ли соблюдать выбранную диету в школе?" cf-conditional-AnyMedicalExclusions="Да">
         <input required type="radio" name="AbleToKeepADiet" cf-label="Да, всегда" value="Да">
         <input required type="radio" name="AbleToKeepADiet" cf-label="Не каждый день" value="Не каждый день">
         <input required type="radio" name="AbleToKeepADiet" cf-label="Нет" value="Нет">
