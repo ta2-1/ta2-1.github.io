@@ -22,7 +22,18 @@
           dictionaryData: data,
           robotImage: "./shef.png",
           hideUserInputOnNoneTextInput: true,
-          animationsEnabled: false,
+          animationsEnabled: true,
+          userInterfaceOptions:{
+              controlElementsInAnimationDelay: 250,
+              robot: {
+                robotResponseTime: 0,
+                chainedResponseTime: 400
+              },
+              user:{
+                showThinking: true,
+                showThumb: true
+              }
+          },
           submitCallback: function() {
             document.getElementById("form").submit(); 
             conversationalForm.addRobotChatResponse("Ваши ответы сохранены."); 
@@ -49,13 +60,13 @@
       <input required type="radio" name="IsRationVaried" cf-label="Нет, хотелось бы расширения рациона" value="Нет, хотелось бы расширения рациона">
     </fieldset>  
     
-	<fieldset cf-questions="Есть ли продукты в меню столовой, которых – по Вашему мнению – не хватает (совсем нет или мало)?">
+    <fieldset cf-questions="Есть ли продукты в меню столовой, которых – по Вашему мнению – не хватает (совсем нет или мало)?">
       <input required type="radio" name="AnyMissingProducts" cf-label="Да" value="Да">
       <input required type="radio" name="AnyMissingProducts" cf-label="Нет" value="Нет">
     </fieldset>  
     <input type="text" name="MissingProducts" cf-conditional-AnyMissingProducts="Да" cf-questions="Каких именно?"/>
 
-	<fieldset cf-questions="Есть ли продукты в меню столовой, которые, наоборот, хотелось бы исключить?">
+    <fieldset cf-questions="Есть ли продукты в меню столовой, которые, наоборот, хотелось бы исключить?">
       <input required type="radio" name="AnyProductsToForbid" cf-label="Да" value="Да">
       <input required type="radio" name="AnyProductsToForbid" cf-label="Нет" value="Нет">
     </fieldset>  
@@ -67,7 +78,7 @@
     <input required type="radio" name="AnyMedicalExclusions" cf-label="Да" value="Да">
     <input required type="radio" name="AnyMedicalExclusions" cf-label="Нет" value="Нет">
     </fieldset>
-	<fieldset cf-questions="Укажите, почему эти продукты в «красном списке»?">
+    <fieldset cf-questions="Укажите, почему эти продукты в «красном списке»?">
       <select name="WhyMedicalExclusion" cf-conditional-AnyMedicalExclusions="Да">
        <option value="Пищевая аллергия/непереносимость">Пищевая аллергия/непереносимость</option>
 	   <option value="Непищевая аллергия">НЕпищевая аллергия</option>
@@ -92,7 +103,7 @@
 		<option value="что-то другое">что-то другое</option>
       </select>
     </fieldset>  
-	<input type="text" name="OtherMedicalExclusions" cf-conditional-MedicalExclusions="другое" cf-questions="Что именно?"/>
+    <input type="text" name="OtherMedicalExclusions" cf-conditional-MedicalExclusions="другое" cf-questions="Что именно?"/>
 	
     <fieldset cf-questions="Получает ли Ваш ребёнок АСИТ (аллерген-специфическую иммунотерапию)?" cf-conditional-WhyMedicalExclusion="Да">
       <input cf-conditional-WhyMedicalExclusion="Да" type="radio" name="NeedASIT" cf-label="Да" value="Да">
@@ -103,34 +114,34 @@
       <input required type="radio" name="AnyFoodExclusions" cf-label="Да" value="Да">
       <input required type="radio" name="AnyFoodExclusions" cf-label="Нет" value="Нет">
     </fieldset>
-	<fieldset cf-questions="Выберите эти продукты из списка продуктов/компонентов?">
+    <fieldset cf-questions="Выберите эти продукты из списка продуктов/компонентов?">
       <select name="FoodExclusions" multiple cf-conditional-AnyFoodExclusions="Да">
         <option value="мёд">мёд</option>
-		<option value="арахис">арахис</option>
-		<option value="иные орехи">иные орехи</option>
-		<option value="горчица">горчица</option>
-		<option value="сельдерей">сельдерей</option>
-		<option value="соя">соя</option>
-		<option value="яйца">яйца</option>
-		<option value="глютен">глютен</option>
-		<option value="молоко + все кисломолочные продукты">молоко + все кисломолочные продукты</option>
-		<option value="только молоко">только молоко</option>
-		<option value="рыба">рыба</option>
-		<option value="морепродукты">морепродукты</option>
-		<option value="шоколад/какао">шоколад/какао</option>
-		<option value="что-то другое">что-то другое</option>
+        <option value="арахис">арахис</option>
+        <option value="иные орехи">иные орехи</option>
+        <option value="горчица">горчица</option>
+        <option value="сельдерей">сельдерей</option>
+        <option value="соя">соя</option>
+        <option value="яйца">яйца</option>
+        <option value="глютен">глютен</option>
+        <option value="молоко + все кисломолочные продукты">молоко + все кисломолочные продукты</option>
+        <option value="только молоко">только молоко</option>
+        <option value="рыба">рыба</option>
+        <option value="морепродукты">морепродукты</option>
+        <option value="шоколад/какао">шоколад/какао</option>
+        <option value="что-то другое">что-то другое</option>
       </select>
     </fieldset>  
-	<input type="text" name="OtherFoodExclusions" cf-conditional-FoodExclusions="другое" cf-questions="Что именно?"/>
+	  <input type="text" name="OtherFoodExclusions" cf-conditional-FoodExclusions="другое" cf-questions="Что именно?"/>
     
     <fieldset cf-questions="Получается ли соблюдать выбранную диету в школе?">
       <input required type="radio" name="AbleToKeepADiet" cf-label="Да, всегда" value="Да">
       <input required type="radio" name="AbleToKeepADiet" cf-label="Не каждый день" value="Не каждый день">
 	  <input required type="radio" name="AbleToKeepADiet" cf-label="Нет" value="Нет">
     </fieldset>
-	<input type="text" name="WhyNotOnADiet" cf-conditional-AbleToKeepADiet="Не" cf-questions="Почему?"/>
+	  <input type="text" name="WhyNotOnADiet" cf-conditional-AbleToKeepADiet="Не" cf-questions="Почему?"/>
 	
-	<fieldset cf-questions="Вы довольны рационом ребенка в школе (тем, что он ест и как сочетает продукты)?">
+	  <fieldset cf-questions="Вы довольны рационом ребенка в школе (тем, что он ест и как сочетает продукты)?">
       <input required type="radio" name="RationSatisfied" cf-label="Да" value="Да">
       <input required type="radio" name="RationSatisfied" cf-label="Нет" value="Нет">
       <input required type="radio" name="RationSatisfied" cf-label="Я не знаю, что он ест в школе)" value="Не знаю">
@@ -159,7 +170,7 @@
         <option value="цикорий">цикорий</option>
         <option value="чай">чай</option>
         <option value="вода">вода</option>
-		<option value="ничего">ничего</option>
+		    <option value="ничего">ничего</option>
       </select>
     </fieldset>  
 
