@@ -67,14 +67,12 @@
         <input required type="radio" name="AnyMedicalExclusions" cf-label="Нет" value="Нет">
       </fieldset>
       <fieldset cf-questions="Укажите, почему эти продукты в «красном списке»?">
-        <select name="WhyMedicalExclusion" cf-conditional-AnyMedicalExclusions="Да">
-          <option value="Пищевая аллергия/непереносимость">Пищевая аллергия/непереносимость</option>
-          <option value="Непищевая аллергия">НЕпищевая аллергия</option>
-          <option value="Другая медицинская причина (неважно какая)">Другая медицинская причина (неважно какая)</option>
-        </select>
+        <input required type="radio" cf-conditional-AnyMedicalExclusions="Да" name="WhyMedicalExclusion" cf-label="Пищевая аллергия/непереносимость" value="Пищевая аллергия/непереносимость">
+        <input required type="radio" cf-conditional-AnyMedicalExclusions="Да" name="WhyMedicalExclusion" cf-label="НЕпищевая аллергия" value="Непищевая аллергия">
+        <input required type="radio" cf-conditional-AnyMedicalExclusions="Да" name="WhyMedicalExclusion" cf-label="Другая медицинская причина (неважно какая)" value="Другая медицинская причина">  
       </fieldset>
       <fieldset cf-questions="Выберите эти продукты из списка продуктов/компонентов?">
-        <select name="MedicalExclusions" multiple cf-conditional-AnyMedicalExclusions="Да">
+        <select name="MedicalExclusions" multiple cf-conditional-AnyMedicalExclusions="Да" cf-input-placeholder="Выберите ответы">
           <option value="мёд">мёд</option>
           <option value="арахис">арахис</option>
           <option value="иные орехи">иные орехи</option>
@@ -92,16 +90,17 @@
         </select>
       </fieldset>
       <input type="text" name="OtherMedicalExclusions" cf-conditional-MedicalExclusions="другое" cf-questions="Что именно?"/>
-      <fieldset cf-questions="Получает ли Ваш ребёнок АСИТ (аллерген-специфическую иммунотерапию)?" cf-conditional-WhyMedicalExclusion="Да">
-        <input cf-conditional-WhyMedicalExclusion="Да" type="radio" name="NeedASIT" cf-label="Да" value="Да">
-        <input cf-conditional-WhyMedicalExclusion="Да" type="radio" name="NeedASIT" cf-label="Нет" value="Нет">
+      
+      <fieldset cf-questions="Получает ли Ваш ребёнок АСИТ (аллерген-специфическую иммунотерапию)?" cf-conditional-WhyMedicalExclusion="Непищевая">
+        <input cf-conditional-WhyMedicalExclusion="Непищевая" type="radio" name="NeedASIT" cf-label="Да" value="Да">
+        <input cf-conditional-WhyMedicalExclusion="Непищевая" type="radio" name="NeedASIT" cf-label="Нет" value="Нет">
       </fieldset>
       <fieldset cf-questions="Есть ли продукты, которые Вы исключаете из рациона ребёнка по другим причинам (например, считаете вредными, имеете убеждения или видите нежелательные реакции)?">
         <input required type="radio" name="AnyFoodExclusions" cf-label="Да" value="Да">
         <input required type="radio" name="AnyFoodExclusions" cf-label="Нет" value="Нет">
       </fieldset>
       <fieldset cf-questions="Выберите эти продукты из списка продуктов/компонентов?">
-        <select name="FoodExclusions" multiple cf-conditional-AnyFoodExclusions="Да">
+        <select name="FoodExclusions" multiple cf-conditional-AnyFoodExclusions="Да" cf-input-placeholder="Выберите ответы">
           <option value="мёд">мёд</option>
           <option value="арахис">арахис</option>
           <option value="иные орехи">иные орехи</option>
@@ -230,7 +229,7 @@
         <label for="HasDifficultiesNo">Нет</label>
       </fieldset>
       <fieldset cf-questions="Какие именно?">
-        <select name="WhatDifficulties" cf-conditional-HasDifficulties="Да" multiple>
+        <select name="WhatDifficulties" cf-conditional-HasDifficulties="Да" multiple cf-input-placeholder="Выберите ответы">
           <option value="Боится разбить посуду">боится разбить посуду</option>
           <option value="Переживает, что в очереди торопят">Переживает, что в очереди торопят</option>
           <option value="Не успевает выбрать, что хотелось бы">Не успевает выбрать, что хотелось бы</option>
@@ -243,13 +242,13 @@
       </fieldset>
       <input type="textarea" name="OtherDifficulties" cf-conditional-WhatDifficulties="Другое" cf-questions="Напишите, пожалуйста, свой вариант"/>
       
-      <fieldset cf-questions="По Вашим наблюдениям (и в школе, и дома): ребёнок питается разнообразно?">
+      <fieldset cf-questions="По Вашим наблюдениям (в школе и дома): ребёнок питается разнообразно?">
         <input required type="radio" name="IsRationVaried" cf-label="Да" value="Да">
         <input required type="radio" name="IsRationVaried" cf-label="Нет, хотелось бы расширения рациона" value="Нет, хотелось бы расширения рациона">
       </fieldset>
 
       <fieldset cf-questions="Что в питании младших школьников для Вас важно?">
-        <select name="Accents" multiple>
+        <select name="Accents" multiple cf-input-placeholder="Выберите ответы">
           <option value="Просто вкусная еда из качественных продуктов">Просто вкусная еда из качественных продуктов</option>
           <option value="Уход от добавленного сахара">Уход от добавленного сахара</option>
           <option value="Минимальная кулинарная обработка">Минимальная кулинарная обработка</option>
