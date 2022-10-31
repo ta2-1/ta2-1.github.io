@@ -72,7 +72,7 @@
         <input required type="radio" cf-conditional-AnyMedicalExclusions="Да" name="WhyMedicalExclusion" cf-label="Другая медицинская причина (неважно какая)" value="Другая медицинская причина">  
       </fieldset>
       <fieldset cf-questions="Выберите эти продукты из списка продуктов/компонентов?" cf-input-placeholder="Выберите ответы">
-        <select name="MedicalExclusions" multiple cf-conditional-AnyMedicalExclusions="Да" cf-input-placeholder="Выберите ответы">
+        <select name="MedicalExclusions" multiple cf-conditional-AnyMedicalExclusions="Да">
           <option value="мёд">мёд</option>
           <option value="арахис">арахис</option>
           <option value="иные орехи">иные орехи</option>
@@ -99,8 +99,8 @@
         <input required type="radio" name="AnyFoodExclusions" cf-label="Да" value="Да">
         <input required type="radio" name="AnyFoodExclusions" cf-label="Нет" value="Нет">
       </fieldset>
-      <fieldset cf-questions="Выберите эти продукты из списка продуктов/компонентов?">
-        <select name="FoodExclusions" multiple cf-conditional-AnyFoodExclusions="Да" cf-input-placeholder="Выберите ответы">
+      <fieldset cf-questions="Выберите эти продукты из списка продуктов/компонентов?" cf-input-placeholder="Выберите ответы">
+        <select name="FoodExclusions" multiple cf-conditional-AnyFoodExclusions="Да">
           <option value="мёд">мёд</option>
           <option value="арахис">арахис</option>
           <option value="иные орехи">иные орехи</option>
@@ -118,7 +118,13 @@
         </select>
       </fieldset>
       <input type="text" name="OtherFoodExclusions" cf-conditional-FoodExclusions="другое" cf-questions="Что именно?"/>
-      <fieldset cf-questions="Получается ли соблюдать выбранную диету в школе?">
+      
+      <fieldset cf-questions="Получается ли соблюдать выбранную диету в школе?" cf-conditional-AnyFoodExclusions="Да">
+        <input required type="radio" name="AbleToKeepADiet" cf-label="Да, всегда" value="Да">
+        <input required type="radio" name="AbleToKeepADiet" cf-label="Не каждый день" value="Не каждый день">
+        <input required type="radio" name="AbleToKeepADiet" cf-label="Нет" value="Нет">
+      </fieldset>
+      <fieldset cf-questions="Получается ли соблюдать выбранную диету в школе?" cf-conditional-AnyMedicalExclusions="Да" cf-conditional-AbleToKeepADiet="">
         <input required type="radio" name="AbleToKeepADiet" cf-label="Да, всегда" value="Да">
         <input required type="radio" name="AbleToKeepADiet" cf-label="Не каждый день" value="Не каждый день">
         <input required type="radio" name="AbleToKeepADiet" cf-label="Нет" value="Нет">
@@ -228,8 +234,8 @@
         <input required type="radio" name="HasDifficulties" id="HasDifficultiesNo" value="Нет">
         <label for="HasDifficultiesNo">Нет</label>
       </fieldset>
-      <fieldset cf-questions="Какие именно?">
-        <select name="WhatDifficulties" cf-conditional-HasDifficulties="Да" multiple cf-input-placeholder="Выберите ответы">
+      <fieldset cf-questions="Какие именно?" cf-input-placeholder="Выберите ответы">
+        <select name="WhatDifficulties" cf-conditional-HasDifficulties="Да" multiple>
           <option value="Боится разбить посуду">боится разбить посуду</option>
           <option value="Переживает, что в очереди торопят">Переживает, что в очереди торопят</option>
           <option value="Не успевает выбрать, что хотелось бы">Не успевает выбрать, что хотелось бы</option>
@@ -247,8 +253,8 @@
         <input required type="radio" name="IsRationVaried" cf-label="Нет, хотелось бы расширения рациона" value="Нет, хотелось бы расширения рациона">
       </fieldset>
 
-      <fieldset cf-questions="Что в питании младших школьников для Вас важно?">
-        <select name="Accents" multiple cf-input-placeholder="Выберите ответы">
+      <fieldset cf-questions="Что в питании младших школьников для Вас важно?" cf-input-placeholder="Выберите ответы">
+        <select name="Accents" multiple>
           <option value="Просто вкусная еда из качественных продуктов">Просто вкусная еда из качественных продуктов</option>
           <option value="Уход от добавленного сахара">Уход от добавленного сахара</option>
           <option value="Минимальная кулинарная обработка">Минимальная кулинарная обработка</option>
