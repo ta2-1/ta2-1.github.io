@@ -21,17 +21,14 @@
           formEl: document.getElementById("form"),
           dictionaryData: data,
           robotImage: "./shef.png",
-          // hideUserInputOnNoneTextInput: true,
+          hideUserInputOnNoneTextInput: true,
           animationsEnabled: true,
           userInterfaceOptions:{
-              controlElementsInAnimationDelay: 250,
+              controlElementsInAnimationDelay: 300,
               robot: {
-                robotResponseTime: 250,
-                chainedResponseTime: 400
+                robotResponseTime: 0,
+                chainedResponseTime: 150
               },
-              user:{
-                showThumb: true
-              }
           },
           submitCallback: function() {
             document.getElementById("form").submit(); 
