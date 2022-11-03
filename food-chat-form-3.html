@@ -147,7 +147,7 @@
         <input required type="radio" name="WaterEnough" cf-label="Да" value="Да">
         <input required type="radio" name="WaterEnough" cf-label="Нет" value="Нет">
       </fieldset>
-      <fieldset cf-questions="Что ребёнок пьет в столовой на завтрак?">
+      <fieldset cf-questions="Что ребёнок пьет в столовой на завтрак (выберите все возможные варианты, например:  «чай, вода, ничего»)?" cf-input-placeholder="Выберите все возможные варианты">
         <select name="BreakfastDrinks" multiple>
           <option value="молоко">молоко</option>
           <option value="кефир/ряженка">кефир/ряженка</option>
@@ -161,7 +161,7 @@
           <option value="ничего">ничего</option>
         </select>
       </fieldset>
-      <fieldset cf-questions="А на обед?">
+      <fieldset cf-questions="А на обед?" cf-input-placeholder="Выберите все возможные варианты">
         <select name="LunchDrinks" multiple>
           <option value="морс (клюква / чёрная смородина / малина)">морс (клюква / чёрная смородина / малина)</option>
           <option value="компот (клубника / сухофрукты)">компот (клубника / сухофрукты)</option>
@@ -171,7 +171,7 @@
           <option value="ничего">ничего</option>
         </select>
       </fieldset>
-      <fieldset cf-questions="А на полдник?">
+      <fieldset cf-questions="А на полдник?" cf-input-placeholder="Выберите все возможные варианты">
         <select name="PoldnikDrinks" multiple>
           <option value="кефир/ряженка">кефир/ряженка</option>
           <option value="чай">чай</option>
@@ -207,10 +207,13 @@
       <input type="text" name="AfterSugar" cf-conditional-IsSugarIndifferent="Нет" cf-questions="Как это проявляется?"/>
       <fieldset cf-questions="Ваш ребёнок ест полдник в школе?">
         <input required type="radio" name="EatsPoldnikAtSchool" cf-label="Да" value="Да">
+        <input required type="radio" name="EatsPoldnikAtSchool" cf-label="Иногда" value="Иногда">
         <input required type="radio" name="EatsPoldnikAtSchool" cf-label="Нет" value="Нет">
       </fieldset>
-      <input type="text" name="WhatPrefersForPoldnikAtSchool" cf-conditional-EatsPoldnikAtSchool="Да" cf-questions="Что выбирает на полдник?"/>
+      <input type="text" name="WhatPrefersForPoldnikAtSchool" cf-conditional-EatsPoldnikAtSchool="^Да$" cf-questions="Что выбирает на полдник?"/>
       <input type="text" name="WhyNotPoldnik" cf-conditional-EatsPoldnikAtSchool="Нет" cf-questions="Почему?"/>
+      <input type="text" name="WhyNotPoldnik" cf-conditional-EatsPoldnikAtSchool="Иногда" cf-questions="Почему не всегда?"/>
+      <input type="text" name="WhatPrefersForPoldnikAtSchool" cf-conditional-EatsPoldnikAtSchool="Иногда" cf-questions="Что выбирает на полдник?"/>
       <fieldset cf-questions="А дома бывают полдники?">
         <input required type="radio" name="EatsPoldnikAtHome" cf-label="Да" value="Да">
         <input required type="radio" name="EatsPoldnikAtHome" cf-label="Нет" value="Нет">
